@@ -1,0 +1,32 @@
+/* TODO: tabs component */
+
+.admin-tasks {
+  
+  .tabs {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 0.5rem;
+    list-style: none;
+    border: 1px dashed fuchsia;
+  }
+  
+  li {
+    padding: 0.125rem 0.5rem;
+    border: 1.5px solid hsla(0, 0%, 50%, 0.5);
+    border-block-end: 0;
+    background-color: var(--academica-color-bg-base);
+    border-start-start-radius: var(--academica-size-radius-med);
+    border-start-end-radius: var(--academica-size-radius-med);
+  }
+  
+  a {
+    font-size: var(--academica-size-text-small);
+    color: var(--academica-color-fg-base);
+  }
+}
+
+.toolbar .toolbar-menu,
+.toolbar .toolbar-tray {
+  background-color: var(--academica-color-bg-base);
+}

@@ -1,0 +1,6 @@
+name: Default
+slots:
+  text: "Content Text of Title"
+props:
+  html_tag: h1
+  type: page

@@ -1,0 +1,12 @@
+{%
+  set classes = [
+    'container',
+    modifier_class
+  ]
+%}
+
+{% set attributes = attributes.addClass(classes) %}
+
+<div{{attributes}}>
+  {{ content }}
+</div>

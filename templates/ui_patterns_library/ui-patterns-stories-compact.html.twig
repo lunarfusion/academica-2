@@ -1,0 +1,19 @@
+<div class="ui_patterns_component__stories">
+  {% for story_id, story in component.stories %}
+    {{ _self.render_story(component.id, story_id, story, component.variants) }}
+  {% endfor %}
+</div>
+{% macro render_story(component_id, story_id, story, variants) %}
+  <div class="ui_patterns_story">
+    <h3 class="ui_patterns_story__title">{{ story.name }}</h3>
+    {% if variants and not story.props.variant %}
+        {% for variant_id, variant in variants %}
+          {{ component_story(component_id, story_id, {}, {variant: variant_id}, true) }}
+        {% endfor %}
+    {% else %}
+    <div class="ui_patterns_story__inner">
+      {{ component_story(component_id, story_id, {}, {}, true) }}
+    </div>
+    {% endif %}
+  </div>
+{% endmacro %}

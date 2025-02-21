@@ -1,0 +1,24 @@
+'$schema': 'https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json'
+name: container
+group: base
+status: experimental
+
+props:
+  type: object
+  properties:
+    modifier_class:
+      title: Modifier Class
+      type: string
+      description: Extra classes for custom styling or variants.
+      items:
+        type: string
+      examples:
+        - container--full
+
+slots:
+  content:
+    title: Content
+    type: string
+    description: Content slot.
+    examples:
+     - '<strong>sample html content</strong>'

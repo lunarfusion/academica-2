@@ -1,0 +1,5 @@
+name: Default
+slots:
+  content: "Content of the container"
+props:
+  modifier_class: "container--mod-class"

@@ -1,0 +1,33 @@
+{#
+/**
+ * @file
+ * UI Pattern library page template, override this in your theme.
+ */
+#}
+{% if groups is not empty %}
+  <div class="row">
+  <div class="col col--3">
+  {{ include('ui-patterns-overview-quicklinks.html.twig', {groups: groups}, with_context: false) }}
+  </div>
+  <div class="col col--9">
+  {% for components in groups %}
+    {% for component in components %}
+      <div class="ui_patterns_component" id="{{ component.id }}">
+        <h2 class="ui_patterns_component__title">
+          <a href="{{ url('ui_patterns_library.single', {provider: component.provider, machineName: component.machineName}) }}"
+             class="component__link link">{{ component.name }}</a>
+        </h2>
+        <div class="ui_patterns_component__inner">
+          {{ include('ui-patterns-component-metadata.html.twig', {component: component}, with_context: false) }}
+          {{ include('ui-patterns-component-table.html.twig', {component: component}, with_context: false) }}
+          {% if component.stories %}
+            <div>
+            {{ include('ui-patterns-stories-compact.html.twig', {component: component}, with_context: false) }}
+            </div>
+          {% endif %}
+        </div>
+      {% endfor %}
+    {% endfor %}
+  {% endif %}
+  </div>
+</div>

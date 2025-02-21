@@ -1,0 +1,40 @@
+/*** First col ***/
+.ui_patterns_quicklinks {
+  max-inline-size: 100%;
+  /* border-inline-end: 2px solid var(--academica-color-border-neutral-light); */
+  padding: 0.5rem;
+  background-color: var(--academica-color-bg-neutral-lightest);
+}
+.ui_patterns_quicklinks__group-title {
+    margin: 0;
+  }
+.ui_patterns_quicklinks__group {
+    border-block-start: 6px solid var(--academica-color-border-primary-light);
+    padding: 1rem;
+  }
+/*** Second col ***/
+.ui_patterns_component {
+  max-inline-size: 100%;
+}
+.ui_patterns_component__title {
+    margin-block-end: 2rem;
+  }
+.ui_patterns_component__table {}
+.ui_patterns_component__inner {
+    padding-inline-start: 2rem;
+  }
+.ui_patterns_story {
+  border-block-start: 1px dashed var(--academica-color-border-primary-light);
+  margin-block: 2rem;
+}
+.ui_patterns_story__title {
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin-block-end: 2rem;
+    color: var(--academica-color-fg-subdued);
+    /* text-transform: uppercase; */
+  }
+.ui_patterns_story__inner {
+    padding: 1.5rem;
+  }
+.ui_patterns_variant__title {}

@@ -1,0 +1,55 @@
+/*** BASE RESETS ***/
+html {
+  scroll-behavior: smooth;
+  accent-color: var(--academica-color-action-primary-default);
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+}
+
+body {
+  /* overflow */
+  position: relative;
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  /* fix typography rough edges */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* font display */
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-family: var(--academica-font-primary);
+
+  /* color base */
+  color: var(--academica-color-fg-base);
+  background-color: var(--academica-color-bg-base);
+
+  /* sticky footer */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+@-o-viewport {
+  width: device-width;
+}
+
+@viewport {
+  width: device-width;
+}
+
+*,
+div {
+  box-sizing: border-box;
+}
+
+pre {
+  display: block;
+  white-space: pre-wrap;
+}

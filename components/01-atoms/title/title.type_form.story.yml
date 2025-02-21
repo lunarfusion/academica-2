@@ -1,0 +1,6 @@
+name: "Type: Form Title"
+slots:
+  text: "Content Text of a Form Title"
+props:
+  html_tag: h3
+  type: form
