@@ -24,7 +24,11 @@
   --academica-color-fg-primary: var(--academica-color-blue-020);
   --academica-color-fg-primary-medium: var(--academica-color-blue-040);
   --academica-color-fg-secondary: var(--academica-color-cyan-020);
-  --academica-color-fg-tertiary: var(--academica-color-yellow-060);
+  --academica-color-fg-tertiary: var(--academica-color-purple-060);
+  
+  /*** Shadows ***/
+  --academica-color-shadow: var(--academica-color-black-alpha);
+  --academica-color-shadow-2: var(--academica-color-black-alpha-02);
   
   /*** Backgrounds - Base Theme ***/
   --academica-color-bg-primary-dark: var(--academica-color-blue-010);
@@ -41,8 +45,8 @@
   --academica-color-bg-secondary: var(--academica-color-cyan-040);
   --academica-color-bg-secondary-light: var(--academica-color-cyan-080);
   
-  --academica-color-bg-tertiary: var(--academica-color-yellow-060);
-  --academica-color-bg-tertiary-light: var(--academica-color-yellow-090);
+  --academica-color-bg-tertiary: var(--academica-color-purple-060);
+  --academica-color-bg-tertiary-light: var(--academica-color-purple-090);
   
   /*** Backgrounds - Base Theme - Neutral ***/
   --academica-color-bg-neutral: var(--academica-color-gray-060);
@@ -52,16 +56,17 @@
   /*** Borders - Base Theme ***/
   --academica-color-border-primary: var(--academica-color-blue-020);
   --academica-color-border-primary-light: var(--academica-color-blue-060);
+  --academica-color-border-primary-lightest: var(--academica-color-blue-080);
   
   --academica-color-border-secondary: var(--academica-color-cyan-040);
   --academica-color-border-secondary-light: var(--academica-color-cyan-070);
   
-  --academica-color-border-tertiary: var(--academica-color-yellow-060);
-  --academica-color-border-tertiary-light: var(--academica-color-yellow-070);
+  --academica-color-border-tertiary: var(--academica-color-purple-060);
+  --academica-color-border-tertiary-light: var(--academica-color-purple-070);
   
   /*** Borders - Base Theme - Neutral ***/
-  --academica-color-border-neutral: var(--academica-color-gray-040);
-  --academica-color-border-neutral-light: var(--academica-color-gray-080);
+  --academica-color-border-neutral: var(--academica-color-gray-060);
+  --academica-color-border-neutral-light: var(--academica-color-gray-090);
   
   /*** Actions - Primary Buttons and Inputs - Base Theme ***/
   --academica-color-action-primary-default: var(--academica-color-cyan-070);
@@ -93,21 +98,18 @@
   --academica-color-action-nav-fg-active: var(--academica-color-fg-black-static);
   --academica-color-action-nav-fg-icon: var(--academica-color-cyan-020);
   
-  --academica-color-action-nav-bg-default: var(--academica-color-blue-090);
-  --academica-color-action-nav-bg-subnav: var(--academica-color-blue-093);
-  --academica-color-action-nav-bg-subnav-subnav: var(--academica-color-blue-095);
-  --academica-color-action-nav-bg-subnav-subnav-subnav: var(--academica-color-blue-097);
-  
-  --academica-color-action-nav-bg-hover: var(--academica-color-bg-white-static);
-  --academica-color-action-nav-bg-focus: var(--academica-color-bg-white-static);
-  --academica-color-action-nav-bg-active: var(--academica-color-blue-097);
+  --academica-color-action-nav-bg-default: var(--academica-color-blue-093);
+  --academica-color-action-nav-bg-hover: var(--academica-color-blue-097);
+  --academica-color-action-nav-bg-focus: var(--academica-color-blue-097);
+  --academica-color-action-nav-bg-active: var(--academica-color-blue-090);
   
   /*** NAV Signifier for active nav items  - Base Theme ***/
-  --academica-color-active-indicator: var(--academica-color-blue-040);
+  --academica-color-active-indicator: var(--academica-color-blue-050);
   --academica-color-hover-indicator: var(--academica-color-cyan-060);
+  --academica-color-inactive-indicator: var(--academica-color-blue-090);
   
   /*** Focus Indicator - Base Theme ***/
-  --academica-color-focus-indicator: var(--academica-color-yellow-060);
+  --academica-color-focus-indicator: var(--academica-color-purple-060);
   
   /*** STATIC does not change with dark mode or other themes ***/
   /*** Foreground / Text - Static ***/
@@ -120,7 +122,7 @@
   
   /********* Tags *********/
   --academica-color-tag-cat1: var(--academica-color-cyan-080);
-  --academica-color-tag-cat2: var(--academica-color-yellow-080);
+  --academica-color-tag-cat2: var(--academica-color-purple-080);
   --academica-color-tag-cat3: var(--academica-color-blue-080);
   --academica-color-tag-cat4: var(--academica-color-gray-080);
   

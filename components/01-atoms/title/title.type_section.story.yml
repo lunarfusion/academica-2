@@ -1,6 +1,0 @@
-name: "Type: Section Title"
-slots:
-  text: "Content Text of a Section Title"
-props:
-  html_tag: h2
-  type: section

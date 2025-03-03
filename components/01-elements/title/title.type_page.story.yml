@@ -1,0 +1,6 @@
+name: "Type: Page Title"
+slots:
+  text: "Title Text of a Page"
+props:
+  html_tag: h1
+  type: page

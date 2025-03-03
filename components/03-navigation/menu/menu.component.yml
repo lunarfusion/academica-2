@@ -1,0 +1,32 @@
+name: Menu
+description: "Used to show a navigation bar on the top of the page."
+status: experimental
+group: navigation
+
+variants:
+  vertical:
+    title: "Vertical"
+  horizontal:
+    title: "Horizontal"
+
+props:
+  type: object
+  properties:
+    items:
+      title: "Menu items"
+      $ref: "ui-patterns://links"
+    collapsible:
+      title: "Collapsible"
+      description: Menu items are not collapsible if this prop is missing or empty.
+      type: string
+      enum:
+        - open
+        - closed
+      "meta:enum":
+        open: Open by default
+        closed: Closed by default
+
+libraryOverrides:
+  dependencies:
+    - core/drupal
+    - core/once

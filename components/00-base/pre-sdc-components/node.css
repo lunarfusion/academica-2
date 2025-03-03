@@ -1,0 +1,17 @@
+.node {
+  display: block;
+  inline-size: auto;
+}
+  
+  .node__content {
+    display: flex;
+    flex-direction: column;
+    jusify-content: center;
+    margin-block-end: 2rem;
+  }
+  
+  .node__content-inner {
+    display: inline-block;
+    inline-size: auto;
+    margin: 0 auto;
+  }

@@ -1,14 +1,17 @@
 :root {
-  --academica-shadow-001: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  --academica-shadow-001: var(--academica-color-shadow) 0px 2px 4px -1px,
+var(--academica-color-shadow-2) 0px 1px 3px -1px;
   /* paper on desk */
-  --academica-shadow-002: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  --academica-shadow-002: var(--academica-color-shadow) 0px 6px 12px -2px, var(--academica-color-shadow-2) 0px 3px 7px -3px;
   /* lifted a bit */
-  --academica-shadow-003: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+
+  --academica-shadow-003: var(--academica-color-shadow) 0px 13px 27px -5px, var(--academica-color-shadow-2) 0px 8px 16px -8px;
   /* pretty regular */
+
   --academica-shadow-004: rgba(0, 0, 0, 0.1) 0px 10px 50px;
   /* very blur */
   --academica-shadow-004-x: rgba(0, 0, 0, 0.2) 60px 0 40px -45px, rgba(0, 0, 0, 0.2) -60px 0 40px -45px;
-  
-  
+
+
   --academica-shadow-inset: rgba(0, 0, 0, 0.1) 0px 2px 4px 0px inset;
 }

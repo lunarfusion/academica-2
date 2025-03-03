@@ -1,0 +1,52 @@
+
+{% set nav_type = nav_type in ['sidebar', 'main', 'footer'] ? nav_type : 'main' %}
+{% set nav_type_class = nav_type ? 'nav--%s'|format(nav_type) : '' %}
+{% set modifier_class = '%s %s'|format(nav_type_class, modifier_class|default('')) %}
+
+{% import _self as menus %}
+{% macro menu_links(items, menu_level, nav_type, modifier_class, nav_id) %}
+
+  {% if items %}
+
+      <ul class="nav nav--level-{{- menu_level }} {{ modifier_class -}}" id="{{ nav_id }}">
+
+        {% for item in items %}
+
+          {%
+            set item_classes = [
+              'nav__item',
+              'nav__item--level-' ~ menu_level,
+              item.is_expanded ? 'nav__item--expanded',
+              item.is_collapsed ? 'nav__item--collapsed',
+              item.in_active_trail ? 'nav__item--active-trail',
+              item.below ? 'nav__item--has-children' : '',
+            ]
+          %}
+
+          <li class="{{- item_classes|join(' ')-}}" {{- item_attributes|raw -}}>
+            {% if item.url %}
+              <a class="nav__link"
+                href="{{ item.url }}"{% if item.in_active_trail %} aria-current="page"{% endif %}>
+                {{ item.title }}
+              </a>
+
+              {% else %}
+                <span{{ item_attributes }} class="nav__link">
+                  {{ item.title }}
+                </span>
+              {% endif %}
+
+            {% if item.below %}
+              <div class="nav__subnav-wrapper">
+                {{ menus.menu_links(item.below, menu_level + 1) }}
+              </div>
+            {% endif %}
+          </li>
+
+        {% endfor %}
+      </ul>
+
+    {% endif %}
+  {% endmacro %}
+
+{{ menus.menu_links(items, 0, nav_type, modifier_class, nav_id) }}

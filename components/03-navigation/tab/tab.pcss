@@ -1,0 +1,109 @@
+.tab {
+  position: relative;
+  padding: var(--academica-size-inner-vert-component) var(--academica-size-inner-horiz-component);
+  
+  max-inline-size: 100%;
+  inline-size: auto;
+  transition: var(--academica-transition-basic);
+  background-color: var(--academica-color-action-nav-bg-default);
+  color: var(--academica-color-action-nav-fg-default);
+  border-start-start-radius: var(--academica-size-radius-med);
+  border-start-end-radius: var(--academica-size-radius-med);
+  border-end-start-radius: 0;
+  border-end-end-radius: 0;
+  border-block-end: 0;
+  line-height: 1;
+  font-size: var(--academica-size-text-med);
+  
+  .tabs--sm & {
+    padding: calc(var(--academica-size-inner-vert-component) * 0.5) calc(var(--academica-size-inner-horiz-component) * 0.5);
+    font-size: var(--academica-size-text-small);
+  }
+  
+  .tabs--lg & {
+    padding: calc(var(--academica-size-inner-vert-component) * 1.5) calc(var(--academica-size-inner-horiz-component) * 1.5);
+    font-size: var(--academica-size-text-lrg);
+  }
+  
+  .tabs--lift & {
+    box-shadow: var(--academica-color-shadow-2) 1px -2px 6px -1px;
+  }
+  
+  .tabs--border & {
+    border: 1px solid var(--academica-color-border-neutral);
+  }
+  
+  /*** Focus Indicator ***/
+  &::after {
+    position: absolute;
+    margin: auto;
+    content: "";
+    left: 0;
+    top: 0;
+    
+    z-index: -1;
+    
+    inline-size: calc(100% + (var(--academica-size-gap-focus-indicator) * 2) + (var(--academica-size-thickness-component) * 2));
+    block-size: calc(100% + (var(--academica-size-gap-focus-indicator) * 2) + (var(--academica-size-thickness-component) * 2));
+    
+    margin-block-start: calc((var(--academica-size-gap-focus-indicator) + var(--academica-size-thickness-focus-indicator) + var(--academica-size-thickness-component)) * -1);
+    margin-inline-start: calc((var(--academica-size-gap-focus-indicator) + var(--academica-size-thickness-focus-indicator) + var(--academica-size-thickness-component)) * -1);
+    
+    border-width: var(--academica-size-thickness-focus-indicator);
+    border-style: solid;
+    border-color: var(--academica-color-focus-indicator);
+    opacity: 0;
+    
+    border-radius: calc(var(--academica-size-radius-med) + var(--academica-size-gap-focus-indicator) + var(--academica-size-thickness-component));
+    border-end-start-radius: 0;
+    border-end-end-radius: 0;
+  }
+  
+  /*** State: Active ***/
+  &:active,
+  &.active,
+  &-active,
+  &:focus:active,
+  &.focus.active,
+  &:focus-visible:active,
+  &.focus-visible.active {
+    background-color: var(--academica-color-action-nav-bg-active);
+    color: var(--academica-color-action-nav-fg-active);
+  }
+  
+  /*** State: Hover ***/
+  &:hover {
+    background-color: var(--academica-color-action-nav-bg-hover);
+    color: var(--academica-color-action-nav-fg-hover);
+    outline: none;
+  }
+  
+  /*** State: Focus ***/
+  &:focus:not(:focus-visible),
+  &.focus:not(.focus-visible) {
+    &::after {
+      opacity: 1;
+    }
+  }
+  
+  &:focus,
+  &.focus,
+  &:focus-visible,
+  &.focus-visible {
+    background-color: var(--academica-color-action-nav-bg-focus);
+    color: var(--academica-color-action-nav-fg-focus);
+    box-shadow: none;
+    outline: none;
+    
+    &::after {
+      border-color: var(--academica-color-focus-indicator);
+      opacity: 1;
+    }
+  }
+  
+  /*** prevent focus from firing on click ***/
+  &:-webkit-focus-ring {
+    outline: none;
+  }
+  
+}

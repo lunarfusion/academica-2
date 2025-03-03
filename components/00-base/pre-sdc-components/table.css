@@ -4,7 +4,7 @@
 
   .table th {
     padding: 1rem;
-    background-color: var(--academica-color-bg-secondary-light);
+    background-color: var(--academica-color-bg-primary-light);
   }
 
   .table tr {

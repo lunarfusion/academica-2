@@ -1,0 +1,63 @@
+ {{ include ('academica:container') }}
+<div class="page page--fullwidth">
+
+  <header role="banner">
+    {{ page.top_menu }}
+    {{ page.header }}
+  </header>
+
+    <div class="container container--full">
+      {{ page.main_menu }}
+      {{ page.banner }}
+    </div>
+
+    <div class="container">
+      {{ page.highlighted }}
+
+      {{ page.admin_tasks }}
+
+      {{ page.breadcrumb }}
+
+      {{ page.content_top }}
+    </div>
+
+    <main role="main" class="main-content" id="main-content">
+      <a id="main-content-skip" tabindex="-1"></a>{# link is in html.html.twig #}
+
+      <div class="container container--full">
+        <div class="row row--center row--align-center">
+          <div class="col col--9">
+            {{ page.page_title }}
+          </div>
+        </div>
+      </div>
+
+      <div class="container container--full">
+        <div class="row row--center row--align-center">
+
+          {% if page.sidebar_left %}
+            <aside class="col" role="complementary">
+              {{ page.sidebar_left }}
+            </aside>
+          {% endif %}
+
+          <div class="col col--9">
+            {{ page.content }}
+          </div>
+
+          {% if page.sidebar_right %}
+            <aside class="col" role="complementary">
+              {{ page.sidebar_right }}
+            </aside>
+          {% endif %}
+        </div>
+      </div>
+  </main>
+
+  {% if page.footer %}
+    <footer role="contentinfo">
+      {{ page.footer }}
+    </footer>
+  {% endif %}
+
+</div>{# /.page #}

@@ -12,6 +12,7 @@
         {% endfor %}
     {% else %}
     <div class="ui_patterns_story__inner">
+      <h4 class="ui_patterns_variant__title">{{ variant.name }}Xxx</h4>
       {{ component_story(component_id, story_id, {}, {}, true) }}
     </div>
     {% endif %}

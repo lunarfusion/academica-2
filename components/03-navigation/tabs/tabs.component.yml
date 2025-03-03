@@ -1,0 +1,35 @@
+name: Tabs
+description: "Tabs can be used to show a list of links in a tabbed format."
+status: experimental
+group: navigation
+links:
+  - "https://www.wikipedia.org/"
+
+variants:
+  default:
+    title: Default
+  border:
+    title: Bordered
+  lift:
+    title: Lifted
+
+props:
+  type: object
+  properties:
+    size:
+      title: Size
+      description: "It is possible to set the size of tabs."
+      type: string
+      enum:
+        - sm
+        - md
+        - lg
+      "meta:enum":
+        sm: Small
+        md: Medium
+        lg: Large
+
+
+slots:
+  items:
+    title: Items

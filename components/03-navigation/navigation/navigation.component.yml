@@ -1,0 +1,45 @@
+name: navigation
+description: "Navigation for main and sidebar navs"
+status: experimental
+group: navigation
+
+props:
+  type: object
+
+  properties:
+
+    menu_name:
+      title: "Menu name"
+      description: "For aria label."
+      type: string
+
+    nav_id:
+      title: 'ID'
+      description: "Must start with a letter. Randomly generated if empty."
+      $ref: "ui-patterns://identifier"
+
+    nav_type:
+      type: string
+      title: Layout type
+      description: 'Navigation Type: main, sidebar, footer.'
+      default: main
+      enum:
+        - main
+        - sidebar
+        - footer
+      examples:
+        - main
+
+    items:
+      title: "Nav Menu items"
+      $ref: "ui-patterns://links"
+
+libraryOverrides:
+  js:
+    navigation.js: {}
+    navigation-drawer-open.js: {}
+  dependencies:
+    - core/drupal
+    - core/once
+
+

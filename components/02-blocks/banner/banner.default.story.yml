@@ -1,0 +1,9 @@
+name: Default
+slots:
+  title:
+    content: "Banner Title Default"
+  text: "Banner text xxxxx xxxxx xxxx"
+  image:
+    theme: image
+    uri: "https://picsum.photos/2000/800.jpg"
+    alt: image example

@@ -35,9 +35,6 @@
   --academica-size-border-rad-focus-indicator: 4px;
   --academica-size-gap-focus-indicator: 2px;
   
-  /**** Actions and indicators *****/
-  --academica-size-border-active-item: 9px;
-  
   /*** Border Width ***/
   --academica-size-thickness-component: 1.5px;
   
@@ -59,6 +56,7 @@
   --academica-size-inner-vert-component: 0.75rem;
   --academica-size-inner-horiz-component: 1.25rem;
   
+  /*** Outter Space - Component - general ***/
   --academica-size-sm-gap-component: 0.25rem;
   --academica-size-md-gap-component: 0.75rem;
   --academica-size-lg-gap-component: 1.25rem;
@@ -74,8 +72,10 @@
   --academica-size-nav-dropdown-icon: 0.8rem;
   --academica-size-mobile-nav-toggle: 4.5rem;
   --academica-size-inner-nav-item-vertical: 0.75rem;
-  --academica-size-inner-nav-item-horizontal: 1rem;
+  --academica-size-inner-nav-item-horizontal: 1.15rem;
   
+  /**** Actions and indicators *****/
+  --academica-size-border-active-item: 12px;
   
   @media (max-width: 992px) {
     --academica-size-col-padding: 16px;

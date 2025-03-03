@@ -1,0 +1,8 @@
+name: Has Icon
+slots:
+  label: "Read More Xxxx"
+props:
+  kind: button
+  size: size-regular
+  has_icon: true
+  icon: 'arrow-forward'

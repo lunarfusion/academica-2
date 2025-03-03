@@ -1,0 +1,9 @@
+name: Horizontal
+variant: horizontal
+props:
+  items:
+    - title: "Item 1"
+      url: "#"
+    - title: "Item 2"
+    - title: "Item 3"
+      url: "#"

@@ -1,0 +1,51 @@
+name: Sidebar Navigation
+props:
+  nav_type: sidebar
+  menu_name: "Sidebar menu"
+  items:
+    - title: Home
+      url: "#"
+    - title: About Us
+      url: "#"
+    - title: Active Item Level Zero
+      url: "#"
+      in_active_trail: true
+
+      below:
+        - title: "Active Trail Subnav One"
+          url: "#"
+          in_active_trail: true
+
+          below:
+            - title: "Active Trail Subnav One Item One"
+              url: "#"
+              in_active_trail: true
+
+        - title: "Active Item Subnav Two"
+          url: "#"
+          below:
+            - title: "Active Item Subnav Two Item Two"
+              url: "#"
+
+    - title: Events
+      url: "#"
+
+      below:
+      - title: "Events Subnav One"
+        url: "#"
+
+        below:
+          - title: "Events Subnav One Item One"
+            url: "#"
+
+      - title: "Events Subnav Two"
+        url: "#"
+
+        below:
+          - title: "Events Subnav Two Item Two"
+            url: "#"
+
+library_wrapper: >
+  <div class="region region--sidebar">
+    {{ _story }}
+    </div>

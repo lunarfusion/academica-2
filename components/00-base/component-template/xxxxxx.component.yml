@@ -1,0 +1,32 @@
+name: xxxxxx
+
+status: experimental
+group: xxxxxx
+
+variants:
+  xxxxxx:
+    title: xxxxxx
+
+props:
+  type: object
+  properties:
+
+slots:
+  title:
+    type: string
+    title: Title text
+    examples:
+      - Title
+
+  text:
+    type: string
+    title: Body text
+    examples:
+      - Text xxxx xxxxx xxxxxx xxxxx
+
+  image:
+      type: string
+      title: Image
+      examples:
+        - src:  "../assets/images/placeholder-600-400.jpg"
+          alt: 'image example'

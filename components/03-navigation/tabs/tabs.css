@@ -1,0 +1,6 @@
+.tabs {
+  display: flex;
+  flex-direction: row;
+  gap: var(--academica-size-sm-gap-component);
+  margin-block: var(--academica-size-lg-gap-component);
+}

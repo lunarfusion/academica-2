@@ -1,0 +1,10 @@
+name: "Type: Section Title"
+slots:
+  text: "Title Text of a Section"
+props:
+  html_tag: h2
+  type: section
+library_wrapper: >
+  <section class="section">
+  {{ _story }}
+  </section>

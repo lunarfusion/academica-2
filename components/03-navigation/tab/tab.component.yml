@@ -1,0 +1,25 @@
+name: Tab
+description: "Tab item shows a link in a tabbed format."
+status: experimental
+group: navigation
+
+links:
+  - "https://www.wikipedia.org/"
+
+props:
+  type: object
+  properties:
+    active:
+      title: "Active link"
+      description: "Css class for whether the link corresponds to the current url."
+      type: boolean
+
+slots:
+  link:
+    title: Link
+    description: "The link item."
+
+libraryOverrides:
+      dependencies:
+        - core/drupal
+        - core/once

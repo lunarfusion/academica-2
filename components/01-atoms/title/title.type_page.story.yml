@@ -1,6 +1,0 @@
-name: "Type: Page Title"
-slots:
-  text: "Content Text of a Page Title"
-props:
-  html_tag: h1
-  type: page

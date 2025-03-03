@@ -1,0 +1,28 @@
+name: branding
+status: experimental
+group: blocks
+
+props:
+  type: object
+
+  properties:
+    site_logo:
+      type: string
+      format: iri-reference
+      examples:
+        - "/themes/custom/academica-2/assets/images/logo.svg"
+    url:
+      type: string
+      title: Branding url
+      format: iri-reference
+
+    site_name:
+      type: string
+      examples:
+        - 'Academica'
+
+    site_slogan:
+      type: string
+      examples:
+        - 'A Higher Education Design System Demo'
+

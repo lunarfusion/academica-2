@@ -1,4 +1,4 @@
-a:not(.button) {
+a:not(.button, .tab, .nav__link) {
   position: relative;
   color: var(--academica-color-link-default);
   font-weight: 500;
@@ -8,8 +8,8 @@ a:not(.button) {
 }
   
   
-  p>a:not(.button),
-  li>a:not(.button) {
+  p>a:not(.button, .tab, .nav__link),
+  li>a:not(.button, .tab, .nav__link) {
     background: linear-gradient(to right,
         var(--academica-color-link-decoration-02) 0%, var(--academica-color-link-decoration-02) 50%,
         var(--academica-color-link-decoration-01) 51%, var(--academica-color-link-decoration-01) 100%);
@@ -22,12 +22,12 @@ a:not(.button) {
   }
   
   
-  .menu-item>a:not(.button) {
+  .menu-item>a:not(.button, .tab, .nav__link) {
     background: transparent;
   }
   
   
-  a:not(.button) {
+  a:not(.button, .tab, .nav__link) {
   border: var(--academica-size-thickness-focus-indicator) solid transparent;
 }
   
@@ -35,33 +35,33 @@ a:not(.button) {
   /* focus indicator */
   
   
-  a:not(.button):hover,
-  a:not(.button):visited:hover {
+  a:not(.button, .tab, .nav__link):hover,
+  a:not(.button, .tab, .nav__link):visited:hover {
     color: var(--academica-color-link-hover);
     background-position: 2% 100%;
   }
   
   
-  a:not(.button):focus,
-  a:not(.button):focus-visible,
-  a:not(.button):visited:focus,
-  a:not(.button):visited:focus-visible {
+  a:not(.button, .tab, .nav__link):focus,
+  a:not(.button, .tab, .nav__link):focus-visible,
+  a:not(.button, .tab, .nav__link):visited:focus,
+  a:not(.button, .tab, .nav__link):visited:focus-visible {
     color: var(--academica-color-link-focus);
     outline: 0;
     border-color: var(--academica-color-focus-indicator);
   }
   
   
-  a:not(.button):active,
-  a:not(.button):visited:active {
+  a:not(.button, .tab, .nav__link):active,
+  a:not(.button, .tab, .nav__link):visited:active {
     color: var(--academica-color-link-active);
     border-color: transparent;
     outline: none;
   }
   
   
-  a:not(.button):focus:active,
-  a:not(.button):focus-visible:active {
+  a:not(.button, .tab, .nav__link):focus:active,
+  a:not(.button, .tab, .nav__link):focus-visible:active {
     border-color: transparent;
     outline: none;
   }
@@ -70,14 +70,14 @@ a:not(.button) {
   /*** prevent focus from firing on click ***/
   
   
-  a:not(.button):-webkit-focus-ring {
+  a:not(.button, .tab, .nav__link):-webkit-focus-ring {
     border-color: transparent;
     outline: none;
     box-shadow: none;
   }
   
   
-  a:not(.button):visited {
+  a:not(.button, .tab, .nav__link):visited {
     color: var(--academica-color-link-visited);
   }
 

@@ -1,0 +1,9 @@
+name: Layout Vertical
+slots:
+  label: "Read More Xxxx"
+props:
+  kind: button
+  size: size-regular
+  layout: vertical
+  has_icon: true
+  icon: 'menu-open'

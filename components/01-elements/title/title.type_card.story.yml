@@ -1,0 +1,6 @@
+name: "Type: Card Title"
+slots:
+  text: "Title Text of a Card"
+props:
+  html_tag: h3
+  type: card

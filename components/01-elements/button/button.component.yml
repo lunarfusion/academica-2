@@ -1,0 +1,126 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: button
+status: experimental
+group: elements
+
+variants:
+  primary:
+    title: Primary
+  secondary:
+    title: Secondary
+  ghost:
+    title: Ghost
+  empty:
+    title: Empty
+
+props:
+  type: object
+  properties:
+
+    has_icon:
+      type: boolean
+      enum:
+        - true
+        - false
+      default: false
+
+    icon_only:
+      type: boolean
+      description: Text is screenreader only
+      enum:
+        - true
+        - false
+      default: false
+
+    icon:
+      type: string
+      title: Icon
+      description: Icon name.
+      enum:
+        - 'arrow-forward'
+        - 'arrow-backward'
+        - 'menu-open'
+        - 'menu-close'
+        - 'search-toggle'
+      examples:
+        - 'search-toggle'
+
+    layout:
+      type: string
+      title: Button layout
+      enum:
+        - horizontal
+        - vertical
+      default:
+        - horizontal
+
+    assets_dir:
+      type: string
+      title: Assets dir
+      description: Optional assets directory to get icons from.
+      default: '@academica/../assets/icons/'
+      examples:
+        - '@academica/../assets/icons/'
+
+    is_disabled:
+      type: boolean
+      title: Disabled or not.
+      default: false
+      examples:
+        - false
+
+    url:
+      type: string
+      title: Button URL
+      format: iri-reference
+      default:
+        - http://wikipedia.com
+
+    input_id:
+      type: string
+      format: iri-reference
+      default: button-id
+
+    input_value:
+      type: string
+      title: Input value
+      default: submit
+
+    kind:
+      type: string
+      title: Kind
+      description: 'Button kind: submit, button, link, menu toggle.'
+      default: button
+      enum:
+        - button
+        - link
+        - menu-toggle
+      examples:
+        - button
+
+    size:
+      type: string
+      title: Size
+      description: 'Button size: large, regular, small.'
+      default: size-regular
+      enum:
+        - size-large
+        - size-regular
+        - size-small
+      examples:
+        - size-regular
+
+    modifier_class:
+      type: string
+      title: Modifier class
+      description: Additional classes.
+      examples:
+        - 'custom-class'
+
+slots:
+  label:
+    type: string
+    title: label
+    description: Button label text.
+    default:
+      - Read More Xxxx

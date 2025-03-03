@@ -1,0 +1,38 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: title
+
+status: experimental
+group: elements
+
+props:
+  type: object
+  properties:
+    html_tag:
+      type: string
+      description: Title of a piece of content or a component
+      default: h3
+      enum:
+        - h1
+        - h2
+        - h3
+        - h4
+
+    type:
+      type: string
+      title: Type
+      description: 'Title type: card, form, page, section.'
+      default: card
+      enum:
+        - card
+        - form
+        - page
+        - section
+      examples:
+        - card
+
+slots:
+  text:
+    type: string
+    title: Title text
+    examples:
+      - Title of a Component's Content

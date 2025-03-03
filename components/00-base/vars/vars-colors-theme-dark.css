@@ -10,18 +10,22 @@
     --academica-color-fg-primary: var(--academica-color-blue-080);
     --academica-color-fg-secondary: var(--academica-color-cyan-080);
     
+    /*** Shadows ***/
+    --academica-color-shadow: var(--academica-color-white-alpha);
+    --academica-color-shadow-2: var(--academica-color-white-alpha-02);
+    
     /*** Backgrounds - Base Theme ***/
     /* --academica-color-bg-primary-dark: var(--academica-color-blue-010);
     --academica-color-bg-primary: var(--academica-color-blue-015);
     --academica-color-bg-primary-medium: var(--academica-color-blue-040); */
-    --academica-color-bg-primary-light: var(--academica-color-blue-030);
+    --academica-color-bg-primary-light: var(--academica-color-blue-020);
     --academica-color-bg-primary-lightest: var(--academica-color-blue-005);
     
     /* --academica-color-bg-secondary: var(--academica-color-cyan-040); */
     --academica-color-bg-secondary-light: var(--academica-color-cyan-020);
     
-    /* --academica-color-bg-tertiary: var(--academica-color-yellow-060); */
-    --academica-color-bg-tertiary-light: var(--academica-color-yellow-010);
+    /* --academica-color-bg-tertiary: var(--academica-color-purple-060); */
+    --academica-color-bg-tertiary-light: var(--academica-color-purple-010);
     
     /*** Backgrounds - Base Theme - Neutral ***/
     /* --academica-color-bg-neutral: var(--academica-color-gray-060); */
@@ -29,12 +33,13 @@
     --academica-color-bg-neutral-lightest: var(--academica-color-gray-010);
     
     /*** Borders ***/
-    --academica-color-border-primary: var(--academica-color-blue-060);
-    --academica-color-border-primary-light: var(--academica-color-blue-080);
+    --academica-color-border-primary: var(--academica-color-blue-080);
+    --academica-color-border-primary-light: var(--academica-color-blue-060);
+    --academica-color-border-primary-lightest: var(--academica-color-blue-020);
     
     /*** Borders - Base Theme - Neutral ***/
     --academica-color-border-neutral: var(--academica-color-gray-080);
-    --academica-color-border-neutral-light: var(--academica-color-gray-095);
+    --academica-color-border-neutral-light: var(--academica-color-gray-040);
     
     /*** Actions - Link Text ***/
     --academica-color-link-default: var(--academica-color-cyan-080);

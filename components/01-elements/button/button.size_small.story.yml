@@ -1,0 +1,6 @@
+name: Size Large
+slots:
+  label: "Read More Xxxx"
+props:
+  kind: button
+  size: size-large

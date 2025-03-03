@@ -1,0 +1,34 @@
+{% set banner_type = content.field_banner_type %}
+
+{%
+  set classes = [
+    'banner',
+    variant and variant != 'default' ? 'banner--' ~ variant,
+    modifier_class
+  ]
+%}
+
+{% set attributes = attributes.addClass(classes) %}
+
+<div{{ attributes }}>
+  <div class="banner__container">
+    <div class="banner__content">
+      <div class="banner__content-inner">
+
+      <div class="banner__title">
+        {{ title }}
+      </div>
+
+      <div class="banner__text">
+        {{ text }}
+      </div>
+      </div>
+    </div>
+
+    {% if image %}
+      <div class="banner__image">
+        {{ image }}
+      </div>
+    {% endif %}
+  </div>
+</div>

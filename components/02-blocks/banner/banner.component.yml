@@ -1,0 +1,26 @@
+name: banner
+
+status: experimental
+group: blocks
+
+variants:
+  diptych:
+    title: Diptych
+  hero:
+    title: Hero
+
+props:
+  type: object
+
+slots:
+  title:
+    type: string
+    title: Title text
+
+  text:
+    type: string
+    title: Body text
+
+  image:
+    title: Banner Image
+    description: banner image

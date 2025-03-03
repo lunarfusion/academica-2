@@ -1,5 +1,5 @@
 # These fields are required
-name: academica
+name: academica 2
 description: Academica is an experimental theme using atomic design principles
 type: theme
 core_version_requirement: ^11
@@ -46,11 +46,13 @@ components:
   namespaces:
     base:
       - components/00-base
-    atoms:
-      - components/01-atoms
-    molecules:
-      - components/02-molecules
-    organisms:
-      - components/03-organisms
-    templates:
-      - components/04-templates
+    elements:
+      - components/01-elements
+    blocks:
+      - components/02-blocks
+    navigation:
+    - components/03-navigation
+    regions:
+      - components/04-regions
+    pages:
+      - components/05-pages

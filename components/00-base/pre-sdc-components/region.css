@@ -1,6 +1,8 @@
 .region {
+  position: relative;
   max-width: 100%;
   width: 100%;
+  margin: 0 auto;
 }
 
   .region--main-nav {
@@ -29,6 +31,7 @@
     background-color: var(--academica-color-bg-primary);
     padding-inline: var(--academica-size-baseline);
     padding-block: 1rem;
+    min-block-size: 5rem;
   }
 
 

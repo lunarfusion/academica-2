@@ -1,0 +1,5 @@
+name: Default
+slots:
+  label: "Read More Xxxx"
+props:
+  kind: button

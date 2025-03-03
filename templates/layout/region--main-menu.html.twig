@@ -1,0 +1,26 @@
+{% if content %}
+  <div class="region region--main-nav">
+
+    {{ include ('academica:button', {
+      label: "Menu",
+      has_icon: true,
+      icon: 'menu-open',
+      kind: button,
+      layout: 'vertical',
+      variant: 'empty',
+      input_id: 'menu-toggle',
+    }) }}
+
+    {# {{ include ('academica:button', {
+      label: "Close",
+      has_icon: true,
+      icon: 'menu-close',
+      kind: button,
+      layout: 'vertical',
+      variant: 'empty',
+      input_id: 'menu-toggle-close',
+    }) }} #}
+
+    {{ content }}
+  </div>
+{% endif %}
