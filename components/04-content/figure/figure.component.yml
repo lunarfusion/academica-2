@@ -1,0 +1,14 @@
+name: figure
+status: experimental
+group: content
+
+props:
+  type: object
+  properties:
+    html_tag:
+      type: string
+      default: figure
+
+slots:
+  content:
+    title: Content

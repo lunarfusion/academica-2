@@ -1,0 +1,21 @@
+name: list
+
+status: experimental
+group: content
+
+props:
+  type: object
+
+  properties:
+    html_tag:
+      type: string
+      default: ul
+      enum:
+        - ul
+        - ol
+    items:
+      title: "List items"
+      $ref: "ui-patterns://links"
+# slots:
+#   content:
+#     title: Content

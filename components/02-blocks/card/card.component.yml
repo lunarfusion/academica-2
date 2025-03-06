@@ -1,0 +1,32 @@
+name: card
+
+status: experimental
+group: blocks
+
+variants:
+  default:
+    title: Default
+  diptych:
+    title: Diptych
+
+props:
+  type: object
+
+slots:
+  title:
+    type: string
+    title: Card title text
+
+  summary:
+    type: string
+    title: Card summary text
+
+  image:
+    title: Card Image
+
+  link:
+    type: string
+    title: Card URL
+    format: iri-reference
+    default:
+      - http://wikipedia.com

@@ -1,0 +1,12 @@
+{%
+  set classes = [
+  'figure',
+    variant and variant != 'default' ? variant,
+  ]
+%}
+
+{% set attributes = attributes.addClass(classes) %}
+
+<{{ html_tag|default('figure') }}{{attributes}}>
+  {{ content }}
+</{{ html_tag|default('figure') }}>

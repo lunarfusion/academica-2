@@ -1,0 +1,30 @@
+{% set card_type = content.field_card_type %}
+
+{%
+  set classes = [
+    'card',
+    variant and variant != 'default' ? 'card--' ~ variant,
+    modifier_class
+  ]
+%}
+
+{% set attributes = attributes.addClass(classes) %}
+
+<a{{ attributes }} href="{{ link }}">
+  <div class="card__content">
+    <div class="card__title">
+      <span class="h3">{{ title }}</span>
+    </div>
+
+    <div class="card__text">
+      <span class="p">{{ summary }}</span>
+    </div>
+  </div>
+
+  {% if image %}
+    <div class="card__image">
+      {{ image }}
+    </div>
+  {% endif %}
+
+</a>

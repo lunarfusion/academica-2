@@ -1,0 +1,18 @@
+name: xxxxxx
+
+status: experimental
+group: content
+
+props:
+  type: object
+  properties:
+    html_tag:
+      type: string
+      default: div
+      enum:
+        - div
+        - span
+
+slots:
+  content:
+    title: Content

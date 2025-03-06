@@ -19,10 +19,10 @@ props:
     site_name:
       type: string
       examples:
-        - 'Academica'
+        - 'Title of Site'
 
     site_slogan:
       type: string
       examples:
-        - 'A Higher Education Design System Demo'
+        - 'Optional Site Slogan Text'
 

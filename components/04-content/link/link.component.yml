@@ -1,0 +1,24 @@
+name: link
+
+status: experimental
+group: content
+
+variants:
+  default:
+    title: Normal default link
+  content:
+    title: Link within content
+  cta:
+    title: Call to action link with icon
+
+props:
+  type: object
+  properties:
+    url:
+      title: URL
+      description: "The link URL. Optional."
+      $ref: "ui-patterns://url"
+
+slots:
+  label:
+    title: Label

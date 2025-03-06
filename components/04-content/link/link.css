@@ -1,0 +1,139 @@
+a:not(.button, .tab, .nav__link),
+.link {
+  position: relative;
+  display: inline;
+  color: var(--academica-color-link-default);
+  font-weight: 600;
+  text-decoration: none;
+  transition: var(--academica-transition-basic);
+  border-radius: var(--academica-size-radius-sm);
+  
+  /* focus indicator */
+  border: var(--academica-size-thickness-focus-indicator) solid transparent;
+}
+  
+  /*** *** STATES *** ***/
+  /* state:hover */
+  a:not(.button, .tab, .nav__link):hover,
+  a:not(.button, .tab, .nav__link):visited:hover,
+  .link:hover,
+  .link:visited:hover {
+    color: var(--academica-color-link-hover);
+    background-position: 2% 100%;
+  }
+  /* state:focus */
+  a:not(.button, .tab, .nav__link):focus,
+  a:not(.button, .tab, .nav__link):focus-visible,
+  a:not(.button, .tab, .nav__link):visited:focus,
+  a:not(.button, .tab, .nav__link):visited:focus-visible,
+  .link:focus,
+  .link:focus-visible,
+  .link:visited:focus,
+  .link:visited:focus-visible {
+    color: var(--academica-color-link-focus);
+    outline: 0;
+    border-color: var(--academica-color-focus-indicator);
+  }
+  /* state:active */
+  a:not(.button, .tab, .nav__link):active,
+  a:not(.button, .tab, .nav__link):visited:active,
+  .link:active,
+  .link:visited:active {
+    color: var(--academica-color-link-active);
+    border-color: transparent;
+    outline: none;
+  }
+  a:not(.button, .tab, .nav__link):focus:active,
+  a:not(.button, .tab, .nav__link):focus-visible:active,
+  .link:focus:active,
+  .link:focus-visible:active {
+    border-color: transparent;
+    outline: none;
+  }
+  /*** prevent focus from firing on click ***/
+  a:not(.button, .tab, .nav__link):-webkit-focus-ring, .link:-webkit-focus-ring {
+    border-color: transparent;
+    outline: none;
+    box-shadow: none;
+  }
+  a:not(.button, .tab, .nav__link):visited, .link:visited {
+    color: var(--academica-color-link-visited);
+  }
+  /*** *** *** VARIANTS *** *** ***/
+  /*** variant: content ***/
+  a:not(.button, .tab, .nav__link).content,
+  p>a:not(.button, .tab, .nav__link),
+  li>a:not(.button, .tab, .nav__link),
+  .link.content,
+  p>.link,
+  li>.link {
+    display: inline;
+    background: linear-gradient(to right,
+        var(--academica-color-link-decoration-02) 0%, var(--academica-color-link-decoration-02) 50%,
+        var(--academica-color-link-decoration-01) 51%, var(--academica-color-link-decoration-01) 100%);
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-size: 300% 2px;
+    background-position: 98% 100%;
+    box-decoration-break: slice;
+    -webkit-box-decoration-break: slice;
+  }
+  /*** variant: call to action ***/
+  a:not(.button, .tab, .nav__link).cta, .link.cta {
+    --cta-icon-transform: 0.25rem;
+    
+    display: inline;
+    position: relative;
+    padding-block: 0.125rem;
+    padding-inline-start: 0.125rem;
+    padding-inline-end: 1rem;
+    margin-inline-start: auto;
+    font-family: var(--academica-font-secondary);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.25rem;
+    line-height: 1.1;
+    
+    box-decoration-break: slice;
+    -webkit-box-decoration-break: slice;
+    
+    background: linear-gradient(to right,
+        var(--academica-color-link-decoration-02) 0%, var(--academica-color-link-decoration-02) 50%,
+        transparent 51%, transparent 100%);
+    background-repeat: no-repeat;
+    
+    background-size: 300% 3px;
+    background-position: 90% 100%;
+  }
+  /* visited stays bright */
+  a:not(.button, .tab, .nav__link).cta:visited, .link.cta:visited {
+      color: var(--academica-color-link-default);
+    }
+  a:not(.button, .tab, .nav__link).cta:hover, .link.cta:hover {
+      background-position: 10% 100%;
+    }
+  a:not(.button, .tab, .nav__link).cta::after, .link.cta::after {
+      content: "";
+      width: 1.125rem;
+      height: 1.125rem;
+      position: absolute;
+      bottom: 0;
+      top: 0;
+      right: 0;
+      left: calc(100% + var(--cta-icon-transform));
+      margin-block: auto;
+      margin-inline-start: auto;
+      background-color: var(--academica-color-link-hover);
+      -webkit-mask-image: url('../../../assets/icons/arrow-forward-alt.svg');
+              mask-image: url('../../../assets/icons/arrow-forward-alt.svg');
+      -webkit-mask-repeat: no-repeat;
+              mask-repeat: no-repeat;
+      -webkit-mask-position: center;
+              mask-position: center;
+      max-block-size: 100%;
+      transition: var(--academica-transition-boing);
+    }
+  a:not(.button, .tab, .nav__link).cta:hover::after, .link.cta:hover::after {
+      transform: translateX(var(--cta-icon-transform)) scale(1.1);
+      background-color: var(--academica-color-link-default);
+    }

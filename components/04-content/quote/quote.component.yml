@@ -1,0 +1,26 @@
+name: quote
+
+status: experimental
+group: content
+
+variants:
+  blockquote:
+    title: Blockquote
+    description: a direct, unaltered quote from a source
+  pullquote:
+    title: Pullquote
+    description: a short sample of text from the body content
+
+props:
+  type: object
+  properties:
+    html_tag:
+      type: string
+      default: blockquote
+      enum:
+        - blockquote
+        - div
+
+slots:
+  content:
+    title: Content

@@ -1,0 +1,59 @@
+/*** Lists ***/
+.list,
+.node__content>ol,
+.node__content>ul:not(.nav, .menu) {
+  /* ul:not(.menu, .nav) { */
+  margin-block: 2rem;
+}
+/*** *** *** ELEMENTS *** *** ***/
+li:not(.menu__item, .nav__item) {
+  padding: 0;
+  margin: 0;
+  margin-block-end: 1rem;
+  
+  color: var(--academica-color-fg-base);
+  font-family: var(--academica-font-primary);
+  font-size: var(--academica-size-text-med);
+  line-height: 1.4;
+  font-weight: 400;
+  
+  max-width: var(--academica-size-charlimit);
+}
+li:not(.menu__item, .nav__item)::marker {
+    color: var(--academica-color-fg-primary-medium);
+  }
+li:not(.menu-item),
+&__item {
+  padding: 0;
+  margin: 0;
+  margin-block-end: 1rem;
+  
+  color: var(--academica-color-fg-base);
+  font-family: var(--academica-font-primary);
+  font-size: var(--academica-size-text-med);
+  line-height: 1.4;
+  font-weight: 400;
+  
+  max-width: var(--academica-size-charlimit);
+}
+li:not(.menu-item)::marker, &__item::marker {
+    color: var(--academica-color-fg-primary-medium);
+  }
+/*** *** *** ORDERED LIST *** *** ***/
+ol li::marker, ol__item::marker {
+      font-weight: 600;
+    }
+/*** *** *** UNORDERED LIST *** *** ***/
+ul li::marker, ul__item::marker {
+      font-size: 1.1rem;
+    }
+/* .node__content li:not(.menu-item) { */
+.node__content li ol {
+  list-style-type: lower-alpha;
+}
+.node__content li ul {
+  list-style-type: square;
+}
+.node__content li ul li::marker {
+    font-size: 0.75rem;
+  }

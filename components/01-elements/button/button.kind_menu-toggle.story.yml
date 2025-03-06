@@ -1,0 +1,10 @@
+name: Menu Toggle
+slots:
+  label: "Toggle Menu"
+props:
+  kind: menu-toggle
+  size: size-regular
+  has_icon: true
+  icon: 'menu-open'
+  layout: vertical
+  input_id: menu-toggle

@@ -1,8 +1,61 @@
-.xxxxxx {
-
-  &--xxxx {}
-
-  &--xxxxx {}
-
-  &--xxxxxxx {}
+.block-component-name {
+  
+  /*** *** *** ELEMENTS *** *** ***/
+  &__elementname {}
+  
+  &__element-name {}
+  
+  /*** Focus Indicator ***/
+  &::after {
+    position: absolute;
+    margin: auto;
+    content: "";
+    left: 0;
+    top: 0;
+    
+    z-index: -1;
+    
+    inline-size: calc(100% + (var(--academica-size-gap-focus-indicator) * 2) + (var(--academica-size-thickness-component) * 2));
+    block-size: calc(100% + (var(--academica-size-gap-focus-indicator) * 2) + (var(--academica-size-thickness-component) * 2));
+    
+    margin-block-start: calc((var(--academica-size-gap-focus-indicator) + var(--academica-size-thickness-focus-indicator) + var(--academica-size-thickness-component)) * -1);
+    margin-inline-start: calc((var(--academica-size-gap-focus-indicator) + var(--academica-size-thickness-focus-indicator) + var(--academica-size-thickness-component)) * -1);
+    
+    border-width: var(--academica-size-thickness-focus-indicator);
+    border-style: solid;
+    border-color: var(--academica-color-focus-indicator);
+    opacity: 0;
+    
+    border-radius: calc(var(--academica-size-radius-button) + var(--academica-size-gap-focus-indicator) + var(--academica-size-thickness-component));
+  }
+  
+  /*** *** STATES *** ***/
+  /* state:hover */
+  &:hover {}
+  
+  /* state:focus */
+  &:focus,
+  &:focus-visible {}
+  
+  &:focus:not(:focus-visible) {
+    
+    /* focus indicator */
+    &::after {
+      opacity: 1;
+    }
+  }
+  
+  /* state:active */
+  &:active,
+  &:focus:active,
+  &:focus-visible:active {}
+  
+  /* prevent focus from firing on click */
+  &:-webkit-focus-ring {
+    outline: none;
+  }
+  
+  /*** *** *** VARIANTS *** *** ***/
+  /*** variant: xxxxxx */
+  &--secondary {}
 }

@@ -1,0 +1,6 @@
+name: Default
+
+slots:
+  label: "link text"
+props:
+  url: "#"

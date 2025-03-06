@@ -19,7 +19,8 @@
     </div>
   {% else %}
     {% for item in items %}
-      <div{{ attributes.addClass(content_classes) }}>{{ item.content }}</div>
+      <div{{ attributes.addClass(content_classes) }}>
+      {{ item.content }}</div>
     {% endfor %}
   {% endif %}
 {% else %}

@@ -44,6 +44,7 @@
   
   --academica-color-bg-secondary: var(--academica-color-cyan-040);
   --academica-color-bg-secondary-light: var(--academica-color-cyan-080);
+  --academica-color-bg-secondary-lightest: var(--academica-color-cyan-090);
   
   --academica-color-bg-tertiary: var(--academica-color-purple-060);
   --academica-color-bg-tertiary-light: var(--academica-color-purple-090);
@@ -69,27 +70,27 @@
   --academica-color-border-neutral-light: var(--academica-color-gray-090);
   
   /*** Actions - Primary Buttons and Inputs - Base Theme ***/
-  --academica-color-action-primary-default: var(--academica-color-cyan-070);
-  --academica-color-action-primary-hover: var(--academica-color-cyan-075);
-  --academica-color-action-primary-focus: var(--academica-color-cyan-075);
-  --academica-color-action-primary-active: var(--academica-color-cyan-085);
+  --academica-color-action-primary-default: var(--academica-color-blue-020);
+  --academica-color-action-primary-hover: var(--academica-color-blue-035);
+  --academica-color-action-primary-focus: var(--academica-color-blue-035);
+  --academica-color-action-primary-active: var(--academica-color-blue-045);
   
   /*** Actions - Secondary Buttons and Inputs - Base Theme ***/
-  --academica-color-action-secondary-default: var(--academica-color-gray-070);
-  --academica-color-action-secondary-hover: var(--academica-color-gray-085);
-  --academica-color-action-secondary-focus: var(--academica-color-gray-085);
-  --academica-color-action-secondary-active: var(--academica-color-gray-090);
+  --academica-color-action-secondary-default: var(--academica-color-cyan-070);
+  --academica-color-action-secondary-hover: var(--academica-color-cyan-075);
+  --academica-color-action-secondary-focus: var(--academica-color-cyan-075);
+  --academica-color-action-secondary-active: var(--academica-color-cyan-085);
   
   /*** Actions - Link Text ***/
-  --academica-color-link-default: var(--academica-color-blue-030);
-  --academica-color-link-hover: var(--academica-color-cyan-040);
-  --academica-color-link-focus: var(--academica-color-cyan-040);
-  --academica-color-link-active: var(--academica-color-cyan-050);
+  --academica-color-link-default: var(--academica-color-blue-040);
+  --academica-color-link-hover: var(--academica-color-purple-060);
+  --academica-color-link-focus: var(--academica-color-blue-050);
+  --academica-color-link-active: var(--academica-color-blue-060);
   --academica-color-link-visited: var(--academica-color-fg-base);
   
   /*** Foreground / Text - Links text decoration ***/
   --academica-color-link-decoration-01: var(--academica-color-border-secondary-light);
-  --academica-color-link-decoration-02: var(--academica-color-border-tertiary);
+  --academica-color-link-decoration-02: var(--academica-color-border-tertiary-light);
   
   /*** NAV Actions - Menu Items ***/
   --academica-color-action-nav-fg-default: var(--academica-color-blue-020);

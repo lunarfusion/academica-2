@@ -1,6 +1,6 @@
 {% if content %}
   <div class="region region--main-nav">
-
+{#
     {{ include ('academica:button', {
       label: "Menu",
       has_icon: true,
@@ -9,7 +9,7 @@
       layout: 'vertical',
       variant: 'empty',
       input_id: 'menu-toggle',
-    }) }}
+    }) }} #}
 
     {# {{ include ('academica:button', {
       label: "Close",
@@ -21,6 +21,18 @@
       input_id: 'menu-toggle-close',
     }) }} #}
 
+
+
     {{ content }}
+    {{ include ('academica:button', {
+      label: "Menu",
+      has_icon: true,
+      icon: 'menu-open',
+      kind: 'menu-toggle',
+      layout: 'vertical',
+      variant: 'primary',
+      input_id: 'menu-toggle',
+    }) }}
+
   </div>
 {% endif %}

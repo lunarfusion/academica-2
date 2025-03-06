@@ -1,0 +1,25 @@
+name: aside
+
+status: experimental
+group: content
+
+variants:
+  default:
+    title: default aside
+  float-right:
+    title: Right floated aside
+  float-left:
+    title: Left floated aside
+
+props:
+  type: object
+  properties:
+    html_tag:
+      type: string
+      default: aside
+
+slots:
+  title:
+    title: Aside title
+  content:
+    title: Aside content

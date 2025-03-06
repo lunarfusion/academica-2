@@ -16,6 +16,15 @@
   </head>
 
   <body{{ attributes.addClass(body_classes) }}>
+
+    {{ include ('academica:container') }}
+
+   {# add content components #}
+    {# {{ include ('academica:link') }}
+    {{ include ('academica:paragraph') }}
+    {{ include ('academica:list') }}
+    {{ include ('academica:aside') }} #}
+
     {#
       Keyboard navigation/accessibility link to main content section in
       page.html.twig.

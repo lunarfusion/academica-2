@@ -18,8 +18,8 @@
 		mainMenu.classList.toggle('menu-closed');
 
 		// change toggle button to is-open
-		menuTrigger.classList.toggle('is-open');
-		console.log('opener clicked');
+		// menuTrigger.classList.toggle('is-open');
+		// console.log('opener clicked');
 
 		// aria-expanded switch
 		// get the aria-expanded state of the toggler and if it's true, make it false

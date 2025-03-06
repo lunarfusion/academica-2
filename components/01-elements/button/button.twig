@@ -1,5 +1,6 @@
 
 {% set kind = kind in ['button', 'link', 'menu-toggle'] ? kind : 'button' %}
+{% set kind_class = kind ? 'button--%s'|format(kind) : '' %}
 {% set assets_dir = assets_dir|default('@academica/../assets/icons/') %}
 
 
@@ -9,6 +10,7 @@
     variant and variant != 'default' ? 'button--' ~ variant,
     size ? 'button--' ~ size,
     layout ? 'button--' ~ layout,
+    kind_class,
     modifier_class
   ]
 %}
@@ -94,8 +96,14 @@
     {% if attributes is not empty %}
       {{attributes.setAttribute('id',input_id)}}
     {% endif %}
-    {% if is_disabled %}disabled="disabled" aria-disabled="true"{% endif %}>
-    {{- content_markup -}}
+
+    {# {{- content_markup -}} #}
+
+    <span class="button__content">
+      <span class="open-text">MENU</span>
+      <span class="close-text">CLOSE</span>
+      <span class="button__icon"></span>
+    </span>
   </button>
 
 {% endif %}

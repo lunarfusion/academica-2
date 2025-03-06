@@ -1,0 +1,24 @@
+{%
+  set classes = [
+  'list',
+    variant and variant != 'default' ? variant,
+  ]
+%}
+
+{% set attributes = attributes.addClass(classes) %}
+
+<{{ html_tag|default('ul') }}{{ attributes }}>
+  {{ _self.list_items(items) }}
+</{{ html_tag|default('ul') }}>
+
+
+{% macro list_items(items) %}
+  {% for item in items %}
+
+    <li class="list__item">
+        {{ item.title }}
+    </li>
+
+  {% endfor %}
+{% endmacro %}
+

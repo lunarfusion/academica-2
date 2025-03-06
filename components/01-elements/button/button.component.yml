@@ -124,3 +124,10 @@ slots:
     description: Button label text.
     default:
       - Read More Xxxx
+
+libraryOverrides:
+  js:
+    menu-toggle.js: {}
+  dependencies:
+    - core/drupal
+    - core/once

@@ -1,0 +1,36 @@
+.aside,
+aside {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 0.75rem 1.25rem;
+  margin: 1.5rem;
+  max-width: 320px;
+  border-block: 4px solid var(--academica-color-border-secondary-light);
+  background-color: var(--academica-color-bg-secondary-lightest);
+  float: right;
+}
+  
+  /*** *** *** VARIANTS *** *** ***/
+  .aside--float-left, aside--float-left {
+    float: left;
+    margin-inline-start: 0;
+  }
+  .aside--float-right, aside--float-right {
+    float: right;
+    margin-inline-end: 0;
+  }
+  .aside p:not(.emory-aside__title), aside p:not(.emory-aside__title) {
+    font-family: var(--academica-font-primary);
+    font-size: var(--academica-size-text-small);
+    line-height: 1.6;
+    font-weight: 400;
+  }
+  .aside__title, aside__title {
+    margin-block: 0;
+    font-size: var(--academica-size-text-med);
+    font-weight: 600;
+  }
+  .aside__content, aside__content {
+    font-size: var(--academica-size-text-sm);
+  }

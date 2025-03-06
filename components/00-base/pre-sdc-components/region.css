@@ -21,6 +21,10 @@
     justify-content: flex-start;
   }
 
+  .region--content-bottom .row {
+      justify-content: space-between;
+    }
+
   /*** Sidebars ***/
 
   .region--sidebar--left {}

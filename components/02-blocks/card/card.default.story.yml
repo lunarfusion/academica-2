@@ -1,0 +1,8 @@
+name: Default
+slots:
+  title: "Card Title Text"
+  summary: "Card summary text xxxxx xxxxx xxxx"
+  image:
+    theme: image
+    uri: "https://picsum.photos/600/400.jpg"
+    alt: image example

@@ -95,7 +95,7 @@ function menu_tree($menu_name) {
     return $menu_output[$menu_name];
 }
 
-function theme_menu_link(array $variables) {
+function academica_menu_link(array $variables) {
     $element = $variables['element'];
     $sub_menu = '';
     if ($element['#below']) {
@@ -103,4 +103,11 @@ function theme_menu_link(array $variables) {
     }
     $output = l($element['#title'], $element['#href'], $element['#localized_options']);
     return '<li' . drupal_attributes($element['#attributes']) . '>' . $output . $sub_menu . "</li>\n";
+}
+
+function academica_preprocess_links__language_block(&$variables) {
+
+  foreach ($variables['links'] as $i => $link) {
+    $variables['links'][$i]['link']['#options']['attributes']['class'][] = 'new-class';
+  }
 }

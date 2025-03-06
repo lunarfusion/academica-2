@@ -11,11 +11,6 @@
   justify-content: center;
   gap: var(--academica-size-md-gap-component);
   
-  background-color: var(--academica-color-action-primary-default);
-  background-repeat: no-repeat;
-  background-size: 100%;
-  background-position: center;
-  
   border: var(--academica-size-thickness-component) solid transparent;
   outline: none;
   border-radius: var(--academica-size-radius-button);
@@ -27,11 +22,13 @@
   font-size: var(--academica-size-text-med);
   font-weight: 600;
   line-height: 1;
-  color: var(--academica-color-fg-black-static);
+  color: var(--academica-color-fg-white-static);
   text-align: center;
   text-transform: none;
   text-decoration: none;
   text-transform: uppercase;
+  
+  background-color: var(--academica-color-action-primary-default);
   
   /*** Focus Indicator ***/
   &::after {
@@ -80,7 +77,7 @@
   &:hover,
   &.hover {
     background-color: var(--academica-color-action-primary-hover);
-    color: var(--academica-color-fg-black-static);
+    color: var(--academica-color-fg-white-static);
   }
   
   /*** State: Focus ***/
@@ -96,7 +93,7 @@
   &:focus-visible,
   &.focus-visible {
     background-color: var(--academica-color-action-primary-focus);
-    color: var(--academica-color-fg-black-static);
+    color: var(--academica-color-fg-white-static);
     box-shadow: none;
     
     &::after {
@@ -113,7 +110,7 @@
   &:focus-visible:active,
   &.focus-visible.active {
     background-color: var(--academica-color-action-primary-active);
-    color: var(--academica-color-fg-black-static);
+    color: var(--academica-color-fg-white-static);
   }
   
   /*** prevent focus from firing on click ***/
@@ -124,10 +121,12 @@
   /*** Variant - secondary ***/
   &--secondary {
     background-color: var(--academica-color-action-secondary-default);
+    color: var(--academica-color-fg-black-static);
     
     &:hover,
     &.hover {
       background-color: var(--academica-color-action-secondary-hover);
+      color: var(--academica-color-fg-black-static);
     }
     
     &:focus,
@@ -135,6 +134,7 @@
     &:focus-visible,
     &.focus-visible {
       background-color: var(--academica-color-action-secondary-focus);
+      color: var(--academica-color-fg-black-static);
     }
     
     &:active,
@@ -142,6 +142,7 @@
     &:focus:active,
     &.focus.active {
       background-color: var(--academica-color-action-secondary-active);
+      color: var(--academica-color-fg-black-static);
     }
   }
   
@@ -156,11 +157,7 @@
     &.hover {
       background-color: transparent;
       border-color: var(--academica-color-action-secondary-hover);
-      color: var(--academica-color-link-hover);
-      
-      path {
-        fill: var(--academica-color-link-hover);
-      }
+      color: var(--academica-color-fg-base);
     }
     
     &:focus,
@@ -272,28 +269,27 @@
   }
   
   /*** Variant - main menu toggle ***/
+  @media (min-width: 993px) {
+    .region--main-nav &--menu-toggle {
+      display: none;
+    }
+  }
+  
+  /* hide mobile nav toggle on desktop */
+  @media (max-width: 992px) {
+    .region--main-nav &--menu-toggle {
+      background-color: transparent;
+      display: inline-flex;
+      transform: translateY(calc((var(--academica-branding-size-block) + (var(--academica-size-block-button) * 1.5)) * -0.5));
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+  }
+  
   &--menu-toggle {
-    border-color: transparent;
-    position: absolute;
-    align-self: flex-end;
-    top: 0;
-    right: 0;
-    display: none;
-    inline-size: var(--academica-size-mobile-nav-toggle);
-    block-size: var(--academica-size-mobile-nav-toggle);
-    padding-block: 0;
-    background-color: var(--academica-color-bg-primary);
-    display: inline-flex;
-    flex-direction: column-reverse;
-    justify-content: center;
-    align-items: center;
-    gap: 0.25rem;
-    border-radius: 0;
-    border-width: 0;
-    border-color: transparent;
-    border-inline-start-width: 2px;
-    color: var(--academica-color-fg-white-static);
-    z-index: 2;
+    z-index: 9;
+    /* align button to center of branding block */
     
     span {
       font-size: inherit;
@@ -304,21 +300,14 @@
       border-color: transparent;
     }
     
-    &::after {
-      border-radius: 0;
+    &.button--primary .button__icon {
+      filter: invert(1);
     }
     
     .button__icon {
-      block-size: auto;
-      inline-size: calc(100% * 0.75);
       content: url("../../../assets/icons/menu-open.svg");
-      filter: invert(1);
     }
     
-    /* change icon to white */
-    svg {
-      filter: invert(1);
-    }
     
     .button__content {
       font-size: var(--academica-size-text-small);
@@ -340,7 +329,6 @@
     &.is-closed {
       .button__icon {
         content: url("../../../assets/icons/menu-open.svg");
-        filter: invert(1);
       }
     }
     
@@ -349,7 +337,6 @@
       
       .button__icon {
         content: url("../../../assets/icons/menu-close.svg");
-        filter: invert(1);
       }
       
       .close-text {
@@ -359,14 +346,6 @@
       .open-text {
         display: none;
       }
-    }
-    
-    /* states are simplified */
-    &:hover,
-    &:focus,
-    &:active {
-      background-color: var(--academica-color-bg-primary);
-      color: var(--academica-color-fg-white-static);
     }
   }
 }

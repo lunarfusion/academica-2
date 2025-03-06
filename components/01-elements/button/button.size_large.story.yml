@@ -1,6 +1,6 @@
 name: Size Small
 slots:
-  label: "Read More Xxxx"
+  label: "Button Text"
 props:
   kind: button
   size: size-small

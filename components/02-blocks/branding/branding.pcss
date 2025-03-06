@@ -2,6 +2,7 @@
   position: relative;
   display: flex;
   width: 100%;
+  min-inline-size: 320px;
   margin-left: auto;
   margin-right: auto;
   background-color: var(--academica-color-bg-primary);
@@ -9,6 +10,8 @@
   background-repeat: no-repeat;
   background-size: 40% auto;
   background-position: calc(100% + 100px) center;
+  block-size: var(--academica-branding-size-block);
+  
   
   &__row {
     width: 100%;
@@ -17,6 +20,7 @@
     padding-inline: var(--academica-size-baseline);
     padding-block: 1rem;
     max-width: var(--academica-size-container-width-lg);
+    block-size: 100%;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -26,13 +30,6 @@
     gap: 1.5rem;
   }
   
-  /* .block-system-branding-block {
-    display: flex;
-    gap: 0.5rem;
-    flex-grow: 1;
-    min-width: 0;
-  } */
-  
   &__logo {
     position: relative;
     
@@ -40,11 +37,17 @@
     flex-direction: column;
     justify-content: center;
     align-items: stretch;
-    flex: 0 0 9%;
+    /* flex: 0 0 9%; */
+    block-size: calc(var(--academica-branding-size-block) - 2rem);
+    inline-size: calc(var(--academica-branding-size-block) - 1rem);
     
     img {
-      padding: 0.5rem;
+      height: 100%;
+      width: auto;
+      max-width: unset;
+      /* padding: 0.125rem; */
       /* min-inline-size: 100px; */
+      object-fit: cover;
     }
     
     a {
@@ -58,8 +61,8 @@
     
     width: auto;
     max-width: 100%;
-    flex-grow: 1;
-    flex-basis: 0;
+    /* flex-grow: 1;
+    flex-basis: 0; */
     
     display: flex;
     flex-direction: column;
@@ -115,16 +118,27 @@
   
   @media (max-width: 992px) {
     & {
+      
+      .branding__row {
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 1rem;
+        margin-left: 0;
+        flex: 0 0 calc(100% - (var(--academica-size-block-button) * 1.5));
+      }
+      
       .branding__logo {
-        flex: 0 0 25%;
-        max-width: 25%;
+        /* flex: 0 0 20%;
+        max-width: 20%; */
       }
       
       .branding__site-name-slogan {
         display: flex;
-        flex: 0 0 75%;
-        max-width: 75%;
-        justify-content: center;
+        /* flex: 0 0 75%;
+        max-width: 75%; */
+        justify-content: flex-start;
       }
       
       &__site-name {
@@ -143,25 +157,18 @@
   }
   
   
-  @media (max-width: 992px) {
-    & {
-      
-      .branding__row {
-        display: flex;
-        flex-wrap: nowrap;
-        align-items: center;
-        justify-content: flex-start;
-        gap: 0;
-        margin-left: 0;
-        flex: 0 0 calc(100% - var(--academica-size-block-button));
-      }
-      
-      .branding__site-name-slogan {
-        justify-content: flex-start;
-      }
+  @media (max-width: 768px) {
+    .branding__row {
+      gap: 0.5rem;
+    }
+    
+    &__site-slogan {
+      font-size: 1rem;
+      visibility: hidden;
+      height: 0;
+      width: 0;
     }
   }
-  
   
   @media (max-width: 576px) {
     
@@ -171,13 +178,6 @@
       a {
         font-size: 1.4rem;
       }
-    }
-    
-    &__site-slogan {
-      font-size: 1rem;
-      visibility: hidden;
-      height: 0;
-      width: 0;
     }
   }
 }

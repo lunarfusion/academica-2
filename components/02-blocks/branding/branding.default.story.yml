@@ -2,5 +2,5 @@ name: Default
 props:
   site_logo: "/themes/custom/academica-2/assets/images/logo.svg"
   url: /
-  site_name: 'Academica'
-  site_slogan: 'A Higher Education Design System Demo'
+  site_name: 'Title of Site'
+  site_slogan: 'Optional Site Slogan Text'

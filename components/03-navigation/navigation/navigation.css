@@ -10,6 +10,7 @@
   inline-size: 100%;
   /* background-color: var(--academica-color-bg-base); */
   background-color: var(--academica-color-action-nav-bg-default);
+  transition: var(--academica-transition-ease-in);
 }
   
   /* submenu show/hide  */
@@ -61,29 +62,6 @@
   .nav--level-0>.nav__item--active-trail {
       border-inline-start: var(--academica-size-border-active-item) solid var(--academica-color-active-indicator);
     }
-  /* .nav--level-1 & {
-      border-inline-start: calc(var(--academica-size-border-active-item) * 0.75) solid var(--academica-color-inactive-indicator);
-    }
-
-    .nav--level-1 &--active-trail {
-      border-inline-start: calc(var(--academica-size-border-active-item) * 0.75) solid var(--academica-color-blue-060);
-    }
-
-    .nav--level-2 & {
-      border-inline-start: calc(var(--academica-size-border-active-item) * 0.75) solid var(--academica-color-inactive-indicator);
-    }
-
-    .nav--level-2 &--active-trail {
-      border-inline-start: calc(var(--academica-size-border-active-item) * 0.75) solid var(--academica-color-blue-080);
-    }
-
-    .nav--level-3 & {
-      border-inline-start: calc(var(--academica-size-border-active-item) * 0.75) solid var(--academica-color-inactive-indicator);
-    }
-
-    .nav--level-3 &--active-trail {
-      border-inline-start: calc(var(--academica-size-border-active-item) * 0.75) solid var(--academica-color-blue-090);
-    } */
   /*** Has Child Menu - dropdown indicator ***/
   .nav__item--has-children::after {
       position: absolute;
@@ -351,7 +329,7 @@
       /* width: auto; */
       /* overflow-x: hidden;
       overflow-y: visible; */
-      transition: var(--academica-transition-smooth);
+      transition: var(--academica-transition-ease-in);
       /* min-height: calc(100vh - (var(--academica-size-nav-item) + 200px)); */
       /* can't be 100vh or else sticky footer is impacted */
       min-height: 50vh;
@@ -392,44 +370,23 @@
 
 
 
-/* hide mobile nav toggle on desktop */
-
-
-
-.region--main-nav .button {
-  display: none;
-  padding-inline: calc(var(--academica-size-radius-button) * 0.5);
-}
-
-
-
 /* Mobile nav drawer */
 
 
 
 @media (max-width: 992px) {
-  
-  /* Mobile nav toggle button */
-  .region--main-nav .button {
-    display: inline-flex;
-    position: absolute;
-    top: 0;
-    right: 0;
-    transform: translateY(calc((100% + 1.5rem) * -1));
-  }
-  
-  #main-menu-hider {
+  .region--main-nav #main-menu-hider {
     position: absolute;
     inline-size: 100%;
     z-index: 3;
     transition: var(--academica-transition-ease-in);
   }
   
-  #main-menu-hider.menu-closed {
+  .region--main-nav #main-menu-hider.menu-closed {
     transform: translateX(105%);
   }
   
-  #main-menu-hider.menu-opened {
+  .region--main-nav #main-menu-hider.menu-opened {
     transform: translateX(0);
   }
 }
