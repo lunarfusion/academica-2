@@ -1,4 +1,12 @@
 name: Default
 
 slots:
-  content: "Sphinx of Black Quartz, Judge My Vow."
+  content: “Our teachers made such a difference- all my teachers and professors were very supportive and nurturing.”
+  cite: "- Katherine Goble"
+
+library_wrapper: >
+  <div class="node__content">
+    <div class="node__content-inner">
+      {{ _story }}
+    </div>
+  </div>

@@ -36,8 +36,8 @@ props:
 
 libraryOverrides:
   js:
-    navigation.js: {}
-    navigation-drawer-open.js: {}
+    navigation-subnavs.js: {}
+    navigation-drawer-toggle.js: {}
   dependencies:
     - core/drupal
     - core/once

@@ -1,0 +1,22 @@
+.figure {
+  /* max-width: 400px; */
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  
+  
+}
+  
+  .figure__image {}
+  
+  .figure__caption {
+    margin: 0.25rem;
+    padding: 0.25rem 0.5rem;
+    border-inline-start: 1px solid var(--academica-color-border-neutral);
+    font-size: var(--academica-size-text-small);
+    color: var(--academica-color-fg-base);
+  }
+  
+  .figure__title {}
+  
+  .figure__content {}

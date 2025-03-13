@@ -1,17 +1,26 @@
 .node {
   display: block;
   inline-size: auto;
-
+  
   &__content {
     display: flex;
     flex-direction: column;
     jusify-content: center;
     margin-block-end: 2rem;
   }
-
+  
   &__content-inner {
     display: inline-block;
     inline-size: auto;
     /* margin: 0 auto; */
+  }
+  
+  .page--fullwidth & {
+    &__content-inner {
+      display: inline-block;
+      inline-size: 100%;
+      max-inline-size: var(--academica-size-charlimit);
+      margin: 0 auto;
+    }
   }
 }

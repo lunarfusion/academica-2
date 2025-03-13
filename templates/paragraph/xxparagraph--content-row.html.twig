@@ -1,0 +1,45 @@
+{# {%
+  set classes = [
+    'paragraph',
+    'content-row',
+    'paragraph--type--' ~ paragraph.bundle|clean_class,
+    view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+    not paragraph.isPublished() ? 'paragraph--unpublished',
+  ]
+%}
+
+{% set background = 'content-row--bg-' ~ content.field_background.0|render|lower|replace({' ': "-", '%-%': "-", "_": "-"}) %}
+{% set paragraph_content = (content.field_content) %}
+
+{% block paragraph %}
+  <div{{ attributes.addClass(classes).addClass(background) }}>
+    {% block content %}
+    <div class="content-row__inner">
+      <div class="{{ row_width }}">
+        <div class="row row--center">
+
+
+          {% if paragraph_content is not empty %}
+            {{ paragraph_content }}
+          {% endif %}
+
+
+        </div>
+      </div>
+    </div>
+    {% endblock %}
+  </div>
+{% endblock paragraph %}
+ #}
+
+
+{% extends "block.html.twig" %}
+
+  {% block content %}
+    {{ include ('academica:content-row', {
+      paragraph_content: content.field_content,
+      variant: content.field_background.0|render|lower|replace({'_': "-"}),
+    }) }}
+  {% endblock %}
+
+

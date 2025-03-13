@@ -13,20 +13,35 @@ props:
   type: object
 
 slots:
-  title:
+  card_title:
     type: string
     title: Card title text
 
-  summary:
+  card_summary:
     type: string
     title: Card summary text
 
-  image:
+  card_image:
     title: Card Image
 
-  link:
+  card_link:
     type: string
     title: Card URL
     format: iri-reference
     default:
       - http://wikipedia.com
+#
+#   card_tags:
+#     - type: component
+#       component: "academica:tag"
+#       props:
+#         type: science
+#         label: "Science"
+#         url: "https://example.com"
+
+
+
+# how to do a child component and get the field content?
+  # card_title:
+  #     title: Card Title
+  #     description: Title text of card

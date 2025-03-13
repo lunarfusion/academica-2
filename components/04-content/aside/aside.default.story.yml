@@ -6,5 +6,7 @@ slots:
 
 library_wrapper: >
   <div class="node__content">
-    {{ _story }}
+    <div class="node__content-inner">
+      {{ _story }}
+    </div>
   </div>

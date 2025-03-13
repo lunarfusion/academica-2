@@ -23,32 +23,15 @@
     <main role="main" class="main-content" id="main-content">
       <a id="main-content-skip" tabindex="-1"></a>{# link is in html.html.twig #}
 
+
       <div class="container container--full">
-        <div class="row row--center row--align-center">
-          <div class="col col--9">
-            {{ page.page_title }}
-          </div>
+      {# no sidebars in full width page #}
+        <div>
+          {{ page.page_title }}
         </div>
-      </div>
 
-      <div class="container container--full">
-        <div class="row row--center row--align-center">
-
-          {% if page.sidebar_left %}
-            <aside class="col" role="complementary">
-              {{ page.sidebar_left }}
-            </aside>
-          {% endif %}
-
-          <div class="col col--9">
-            {{ page.content }}
-          </div>
-
-          {% if page.sidebar_right %}
-            <aside class="col" role="complementary">
-              {{ page.sidebar_right }}
-            </aside>
-          {% endif %}
+        <div>
+          {{ page.content }}
         </div>
       </div>
 

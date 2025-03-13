@@ -1,0 +1,11 @@
+.block {
+  flex-grow: 1;
+  flex-basis: 0;
+  
+  /* TODO - find a better way to control card widths in blocks */
+  &:has(>.card) {
+    flex: 0 0 calc(33.33333% - var(--academica-size-xl-gap-component));
+    max-width: calc(33.33333% - var(--academica-size-xl-gap-component));
+    padding: 0;
+  }
+}

@@ -1,0 +1,5 @@
+name: Default
+slots:
+  label: "Tag Text"
+props:
+  icon: 'circle-dot-solid'

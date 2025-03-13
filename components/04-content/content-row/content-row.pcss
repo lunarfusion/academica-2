@@ -1,0 +1,33 @@
+.content-row {
+  border: 1px dashed var(--academica-color-border-primary);
+  min-block-size: 5rem;
+  
+  &__inner {
+    padding: 1rem;
+    display: flex;
+  }
+  
+  &__col {
+    width: auto;
+    max-width: 100%;
+    flex-grow: 1;
+    flex-basis: 0;
+  }
+  
+  div {
+    border: 2px dashed fuchsia;
+  }
+  
+  /*** *** BACKGROUNDS *** ***/
+  &--bg-blue {
+    background-color: var(--academica-color-bg-primary);
+  }
+  
+  &--bg-cyan {
+    background-color: var(--academica-color-bg-secondary);
+  }
+  
+  &--bg-purple {
+    background-color: var(--academica-color-bg-tertiary);
+  }
+}

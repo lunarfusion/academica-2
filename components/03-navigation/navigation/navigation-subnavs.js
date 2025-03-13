@@ -28,7 +28,7 @@
 
 		// prevent link from working when it should be a dropdown trigger
 		// fallback for when Drupal menu item is not configured as nolink or button
-		// dropdownToggle.setAttribute('onclick', 'return false;');
+		dropdownToggle.setAttribute('onclick', 'return false;');
 
 		// Create parent menu item to toggle expanded/collapsed
 		const dropdownMenuItemParent = dropdownToggle.parentNode;

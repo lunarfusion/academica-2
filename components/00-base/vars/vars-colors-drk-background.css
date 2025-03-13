@@ -7,6 +7,7 @@
     --academica-color-fg-subdued: var(--academica-color-gray-095);
     
     --academica-color-fg-primary: var(--academica-color-blue-080);
+    --academica-color-fg-primary-medium: var(--academica-color-blue-085);
     --academica-color-fg-secondary: var(--academica-color-cyan-080);
     
     /*** NAV Actions - Menu Items ***/

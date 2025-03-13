@@ -1,10 +1,8 @@
-{% extends "block.html.twig" %}
-
 {% block content %}
   {{ include ('academica:banner', {
     title: content.field_title,
     text: content.field_text,
     image: content.field_image,
-    variant: content.field_banner_type.0|render|lower|replace({'_': "-"}),
+    variant: content['#block_content'].field_banner_type.0.value,
   }) }}
 {% endblock %}

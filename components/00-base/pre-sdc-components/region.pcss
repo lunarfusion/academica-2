@@ -3,14 +3,20 @@
   max-width: 100%;
   width: 100%;
   margin: 0 auto;
-
+  
   &--main-nav {
     background-color: var(--academica-color-action-nav-bg-default);
     display: flex;
     flex-direction: column;
     /* justify-content: space-between; */
   }
-
+  
+  &--page-title {
+    inline-size: 100%;
+    max-inline-size: var(--academica-size-charlimit);
+    margin: 0 auto;
+  }
+  
   &--content-top {
     width: 100%;
     display: flex;
@@ -19,26 +25,31 @@
     align-items: flex-start;
     justify-content: flex-start;
   }
-
+  
   &--content-bottom {
     .row {
       justify-content: space-between;
     }
   }
-
+  
   /*** Sidebars ***/
   &--sidebar {
-
+    
     &--left {}
-
+    
     &--right {}
   }
-
+  
   &--footer {
     background-color: var(--academica-color-bg-primary);
     padding-inline: var(--academica-size-baseline);
     padding-block: 1rem;
     min-block-size: 5rem;
+    
+    .row {
+      gap: var(--academica-size-col-padding);
+    }
+    
   }
 }
 

@@ -1,0 +1,28 @@
+
+{%
+  set content_row_classes = [
+    'content-row',
+    variant and variant != 'default' ? 'content-row--' ~ variant,
+    modifier_class
+  ]
+%}
+
+
+<div{{ attributes.addClass(content_row_classes) }}>
+  <div class="content-row__inner">
+    <div class="content-row__col">
+      {{ paragraph_content }}
+    </div>
+
+    <div class="content-row__col">
+      {{ paragraph_figure }}
+    </div>
+
+    {# <div class="content-row__col">
+      {{ content }}
+    </div> #}
+
+    {# {{ content }} #}
+  </div>
+</div>
+

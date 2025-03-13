@@ -16,7 +16,7 @@
   --academica-hue-yellow: 42;
   --academica-hue-blue: 240;
   --academica-hue-cyan: 190;
-  --academica-hue-purple: 255;
+  --academica-hue-purple: 260;
   
   --academica-hue-red: 360;
   --academica-hue-orange: 30;
@@ -46,10 +46,10 @@
   --academica-color-gray-095: hsl(var(--academica-hue-white), 10%, 95%);
   --academica-color-white: hsl(var(--academica-hue-white), 10%, var(--academica-lightness-100));
   
-  --academica-color-black-alpha: hsla(var(--academica-hue-white), 10%, var(--academica-lightness-000), 0.4);
-  --academica-color-black-alpha-02: hsla(var(--academica-hue-white), 10%, var(--academica-lightness-000), 0.2);
-  --academica-color-white-alpha: hsla(var(--academica-hue-white), 10%, var(--academica-lightness-100), 0.4);
-  --academica-color-white-alpha-02: hsla(var(--academica-hue-white), 10%, var(--academica-lightness-100), 0.2);
+  --academica-color-black-alpha: hsla(var(--academica-hue-white), 10%, var(--academica-lightness-000), 0.3);
+  --academica-color-black-alpha-02: hsla(var(--academica-hue-white), 10%, var(--academica-lightness-000), 0.1);
+  --academica-color-white-alpha: hsla(var(--academica-hue-white), 10%, var(--academica-lightness-100), 0.3);
+  --academica-color-white-alpha-02: hsla(var(--academica-hue-white), 10%, var(--academica-lightness-100), 0.1);
   
   /*** Blue ***/
   --academica-color-blue-010: hsl(var(--academica-hue-blue), 98%, 10%);

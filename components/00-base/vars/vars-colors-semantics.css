@@ -122,10 +122,10 @@
   --academica-color-bg-black-static: var(--academica-color-black);
   
   /********* Tags *********/
-  --academica-color-tag-cat1: var(--academica-color-cyan-080);
-  --academica-color-tag-cat2: var(--academica-color-purple-080);
-  --academica-color-tag-cat3: var(--academica-color-blue-080);
-  --academica-color-tag-cat4: var(--academica-color-gray-080);
+  --academica-color-tag-cat1: var(--academica-color-cyan-060);
+  --academica-color-tag-cat2: var(--academica-color-purple-060);
+  --academica-color-tag-cat3: var(--academica-color-blue-070);
+  --academica-color-tag-cat4: var(--academica-color-gray-060);
   
   /********* ALERTS *********/
   

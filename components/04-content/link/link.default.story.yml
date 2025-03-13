@@ -4,3 +4,10 @@ slots:
   label: "link text"
 props:
   url: "#"
+
+library_wrapper: >
+  <div class="node__content">
+    <div class="node__content-inner">
+      {{ _story }}
+    </div>
+  </div>

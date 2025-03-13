@@ -13,14 +13,9 @@ variants:
 
 props:
   type: object
-  properties:
-    html_tag:
-      type: string
-      default: blockquote
-      enum:
-        - blockquote
-        - div
 
 slots:
   content:
     title: Content
+  cite:
+    title: Citation

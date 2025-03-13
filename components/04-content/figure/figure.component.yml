@@ -4,11 +4,9 @@ group: content
 
 props:
   type: object
-  properties:
-    html_tag:
-      type: string
-      default: figure
 
 slots:
-  content:
-    title: Content
+  figure_image:
+    title: Image
+  figure_caption:
+    title: Caption

@@ -1,11 +1,17 @@
 {%
   set classes = [
-    variant and variant != 'default' ? variant,
+  'blockquote',
+    variant and variant != 'default' ? 'blockquote--' ~ variant,
   ]
 %}
 
 {% set attributes = attributes.addClass(classes) %}
 
-<{{ html_tag|default('blockquote') }}{{attributes}}>
-  {{ content }}
-</{{ html_tag|default('blockquote') }}>
+<blockquote{{ attributes.addClass(content_row_classes) }}>
+  <span class="blockquote__content">
+    {{ content }}
+  </span>
+  <cite class="blockquote__cite">
+    {{ cite }}
+  </cite>
+</blockquote>

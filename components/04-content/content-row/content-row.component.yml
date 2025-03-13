@@ -1,0 +1,20 @@
+name: content row
+
+status: experimental
+group: content
+
+variants:
+  default:
+    title: default
+  bg-blue:
+    title: Blue background
+
+props:
+  type: object
+
+slots:
+  paragraph_content:
+    type: string
+    title: Content
+  paragraph_figure:
+    title: Figure

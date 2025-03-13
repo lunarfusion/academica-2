@@ -1,8 +1,30 @@
 name: Default
 slots:
-  title: "Card Title Text"
-  summary: "Card summary text xxxxx xxxxx xxxx"
-  image:
+  card_title: "Card Title Text"
+  card_summary: "Card summary text xxxxx xxxxxxxx xxxx xx xxxxxxx xxxxx."
+  card_image:
     theme: image
     uri: "https://picsum.photos/600/400.jpg"
     alt: image example
+  # card_tags:
+  #   - type: component
+  #     component: "academica:tag"
+  #     props:
+  #       type: science
+  #       label: "Science"
+  #       url: "https://example.com"
+
+# how to do a child component and get the field content?
+  # card_title:
+  #   type: component
+  #   component: academica:title
+  #   props:
+  #     type: card
+  #     html_tag: h3
+  #   slots:
+  #     text: Card Title Text
+
+library_wrapper: >
+  <div class="block">
+    {{ _story }}
+  </div>

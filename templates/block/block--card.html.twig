@@ -1,10 +1,8 @@
-{# {% extends "block.html.twig" %}
-
-{% block content %} #}
+{% block content %}
   {{ include ('academica:card', {
-    title: content.field_card_title,
-    summary: content.field_card_summary,
-    image: content.field_card_image,
-    variant: content.field_card_type.0|render|lower|replace({'_': "-"}),
+    card_title: content.field_card_title,
+    card_summary: content.field_card_summary,
+    card_image: content.field_card_image,
+    variant: content['#block_content'].field_card_type.0.value,
   }) }}
-{# {% endblock %} #}
+{% endblock %}

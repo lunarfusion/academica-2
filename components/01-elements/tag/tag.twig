@@ -1,0 +1,42 @@
+{% set assets_dir = assets_dir|default('@academica/../assets/icons/') %}
+
+{% if variant and variant != 'default' %}
+  {% set attributes = attributes.addClass('tag--' ~ variant) %}
+{% endif %}
+
+{%
+  set classes = [
+    'tag',
+    variant and variant != 'default' ? 'tag--' ~ variant,
+  ]
+%}
+
+{% set attributes = attributes.addClass(classes) %}
+
+<div{{ attributes }}>
+  <span class="tag__icon">
+    {{ source(assets_dir ~ icon ~ '.svg') }}
+  </span>
+
+  <span class="tag__label">
+    {{ label }}
+  </span>
+</div>
+
+{# {% if not icon_attributes %}
+  {% set icon_attributes = create_attribute() %}
+{% endif %}
+
+{% if url %}
+
+  <a{{ attributes.setAttribute('href', url) }}>
+    <span class="tag__icon">{{ source(assets_dir ~ icon ~ '.svg') }}</span>
+
+    {{ label }}
+  </a>
+{% else %}
+  <{{ tag }}{{ attributes.addClass('tag') }}>
+     <span class="tag__icon">{{ source(assets_dir ~ icon ~ '.svg') }}</span>
+    {{ label }}
+  </{{ tag }}>
+{% endif %} #}

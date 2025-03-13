@@ -1,0 +1,48 @@
+name: tag
+
+status: experimental
+group: elements
+
+variants:
+  art:
+    title: Art
+  science:
+    title: Science
+  medicine:
+    title: Medicine
+  philosophy:
+    title: Philosophy
+
+slots:
+  label:
+    title: Tag Label
+
+props:
+  type: object
+  properties:
+
+    icon:
+      type: string
+      title: Icon
+      description: Icon name.
+
+    assets_dir:
+      type: string
+      title: Assets dir
+      description: Optional assets directory to get icons from.
+      default: '@academica/../assets/icons/'
+      examples:
+        - '@academica/../assets/icons/'
+#
+#     type:
+#       type: string
+#       title: Type
+#       description: 'Tag type.'
+#
+#     label:
+#       type: string
+#       title: Label
+#
+#     url:
+#       title: URL
+#       type: string

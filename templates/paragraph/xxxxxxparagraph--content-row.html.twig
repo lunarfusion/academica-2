@@ -1,0 +1,71 @@
+{# Preprocess #}
+{% set body = (content.body) %}
+
+{#
+/**
+ * Custom content row for landing page content type
+ * Page Template: page--landing.html.twig
+ *
+ */
+#}
+<!-- row options -->
+{% set row_width = content.field_row_width.0|render|lower|replace({' ': "-", '%-%': "-", "_": "-"}) %}
+{% set background = content.field_background.0|render|lower|replace({' ': "-", '%-%': "-", "_": "-"}) %}
+
+<!-- column content fields -->
+{% set col_first = (content. field_content_column_one.0) %}
+{% set col_second = (content. field_content_column_two.0) %}
+{% set col_third = (content. field_content_column_three.0) %}
+{% set col_fourth = (content. field_content_column_four.0) %}
+
+<!-- column content width fields -->
+{% set col_first_width = content.field_content_column_one_width.0|render|lower|replace({'_': "--"}) %}
+{% set col_second_width = content.field_content_column_two_width.0|render|lower|replace({'_': "--"}) %}
+{% set col_third_width = content.field_content_column_three_width.0|render|lower|replace({'_': "--"}) %}
+{% set col_fourth_width = content.field_content_column_four_width.0|render|lower|replace({'_': "--"}) %}
+
+{%
+  set classes = [
+    'paragraph',
+    'paragraph-content-row',
+    'paragraph--type--' ~ paragraph.bundle|clean_class,
+    view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+    not paragraph.isPublished() ? 'paragraph--unpublished'
+  ]
+%}
+{% block paragraph %}
+  <div{{ attributes.addClass(classes) }}>
+    {% block content %}
+    <div class="paragraph-content-row__inner {{ background }}">
+      <div class="{{ row_width }}">
+        <div class="emory-row emory-row--center">
+
+          {% if col_first is not empty %}
+            <div class="emory-col {{ col_first_width }}">
+              {{ col_first }}
+            </div>
+          {% endif %}
+
+          {% if col_second is not empty %}
+            <div class="emory-col {{ col_second_width }}">
+              {{ col_second }}
+            </div>
+          {% endif %}
+
+          {% if col_third is not empty %}
+            <div class="emory-col {{ col_third_width }}">
+              {{ col_third }}
+            </div>
+          {% endif %}
+
+          {% if col_fourth is not empty %}
+            <div class="emory-col {{ col_fourth_width }}">
+              {{ col_fourth }}
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+    {% endblock %}
+  </div>
+{% endblock paragraph %}

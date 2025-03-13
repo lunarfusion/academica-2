@@ -2,3 +2,9 @@ name: Default
 
 slots:
   content: "Concept of the number one extraplanetary from which we spring star stuff harvesting star light tesseract Rig Veda. A very small stage in a vast cosmic arena great turbulent clouds tendrils of gossamer clouds not a sunrise but a galaxyrise astonishment the ash of stellar alchemy. Stirred by starlight hydrogen atoms extraordinary claims require extraordinary evidence the only home we've ever known bits of moving fluff trillion. Network of wormholes permanence of the stars two ghostly white figures in coveralls and helmets are softly dancing kindling the energy hidden in matter Sea of Tranquility courage of our questions and billions upon billions upon billions upon billions upon billions upon billions upon billions."
+library_wrapper: >
+  <div class="node__content">
+    <div class="node__content-inner">
+      {{ _story }}
+    </div>
+  </div>

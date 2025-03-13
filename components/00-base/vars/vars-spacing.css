@@ -1,9 +1,9 @@
 :root {
   --academica-size-baseline: 16px;
-
+  
   --academica-size-container-padding: 16px;
   --academica-size-col-padding: 24px;
-
+  
   /****** Character width limiter ******/
   --academica-size-charlimit: 75ch;
   /* max width for normal size text */
@@ -11,33 +11,33 @@
   /* max width limit for medium size text */
   --academica-size-charlimit-lg: 55ch;
   /* max width limit for large size text */
-
+  
   /*** Container widths ***/
   --academica-size-container-width: 1200px;
   --academica-size-container-width-lg: 1800px;
-
+  
   /*** Breakpoints ***/
   --academica-size-breakpoint-extra-large: 1200px;
   --academica-size-breakpoint-large: 992px;
   --academica-size-breakpoint-med: 768px;
   --academica-size-breakpoint-small: 576px;
-
+  
   /*** Text Sizes ***/
   --academica-size-text-ultra-small: 8px;
   --academica-size-text-extra-small: 10px;
-  --academica-size-text-small: 12px;
+  --academica-size-text-small: 14px;
   --academica-size-text-med: 16px;
   --academica-size-text-lrg: 22px;
   --academica-size-text-extra-lrg: 28px;
-
+  
   /*** Focus Indicator ***/
   --academica-size-thickness-focus-indicator: 2px;
   --academica-size-border-rad-focus-indicator: 4px;
   --academica-size-gap-focus-indicator: 2px;
-
+  
   /*** Border Width ***/
   --academica-size-thickness-component: 1.5px;
-
+  
   /*** Border Radius ***/
   --academica-size-radius-extra-sm: 2px;
   --academica-size-radius-sm: 4px;
@@ -45,29 +45,29 @@
   --academica-size-radius-lrg: 8px;
   --academica-size-radius-button: 20px;
   --academica-size-radius-component: var(--academica-size-radius-sm);
-
+  
   /*** Inner Space - Component - general ***/
   --academica-size-xs-inner-vert-component: 0.25rem;
   --academica-size-xs-inner-horiz-component: 0.45rem;
-
+  
   --academica-size-sm-inner-vert-component: 0.4rem;
   --academica-size-sm-inner-horiz-component: 0.8rem;
-
+  
   --academica-size-inner-vert-component: 0.75rem;
   --academica-size-inner-horiz-component: 1.25rem;
-
+  
   /*** Outter Space - Component - general ***/
   --academica-size-sm-gap-component: 0.25rem;
   --academica-size-md-gap-component: 0.75rem;
   --academica-size-lg-gap-component: 1.25rem;
   --academica-size-xl-gap-component: 2rem;
-
+  
   --academica-size-block-component-base: 40px;
-
+  
   /*** Size - Component - button ***/
   --academica-size-button-margin: 0.5rem;
   --academica-size-block-button: var(--academica-size-block-component-base);
-
+  
   /* Size - Component - Main Nav */
   --academica-size-nav-item: 50px;
   --academica-size-nav-dropdown-icon: 0.8rem;
@@ -75,23 +75,23 @@
   --academica-size-inner-nav-item-vertical: 0.75rem;
   --academica-size-inner-nav-item-horizontal: 1.15rem;
   --academica-branding-size-block: 200px;
-
-
+  
+  
   /**** Actions and indicators *****/
   --academica-size-border-active-item: 12px;
-
+  
   @media (max-width: 992px) {
     --academica-size-col-padding: 16px;
     --academica-size-container-padding: 12px;
     --academica-branding-size-block: 150px;
   }
-
+  
   @media (max-width: 768px) {
     & {
       --academica-branding-size-block: 100px;
     }
   }
-
+  
   @media (max-width: 576px) {
     & {}
   }

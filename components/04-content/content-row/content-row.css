@@ -1,0 +1,34 @@
+.content-row {
+  border: 1px dashed var(--academica-color-border-primary);
+  min-block-size: 5rem;
+}
+  
+  .content-row__inner {
+    padding: 1rem;
+    display: flex;
+  }
+  
+  .content-row__col {
+    width: auto;
+    max-width: 100%;
+    flex-grow: 1;
+    flex-basis: 0;
+  }
+  
+  .content-row div {
+    border: 2px dashed fuchsia;
+  }
+  
+  /*** *** BACKGROUNDS *** ***/
+  
+  .content-row--bg-blue {
+    background-color: var(--academica-color-bg-primary);
+  }
+  
+  .content-row--bg-cyan {
+    background-color: var(--academica-color-bg-secondary);
+  }
+  
+  .content-row--bg-purple {
+    background-color: var(--academica-color-bg-tertiary);
+  }

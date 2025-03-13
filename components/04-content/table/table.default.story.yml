@@ -2,3 +2,10 @@ name: Default
 
 slots:
   content: "Sphinx of Black Quartz, Judge My Vow."
+
+library_wrapper: >
+  <div class="node__content">
+    <div class="node__content-inner">
+      {{ _story }}
+    </div>
+  </div>

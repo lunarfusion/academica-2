@@ -1,0 +1,56 @@
+.tag {
+  position: relative;
+  vertical-align: top;
+  inline-size: auto;
+  inline-size: auto;
+  block-size: calc((var(--academica-size-block-component-base) * 0.35) + (var(--academica-size-xs-inner-vert-component) * 2));
+  display: inline-flex;
+  align-items: center;
+  gap: var(--academica-size-sm-gap-component);
+  margin-inline-end: 1rem;
+}
+  
+  .tag__label {
+    font-family: var(--academica-font-primary);
+    font-size: var(--academica-size-text-extra-small);
+    line-height: 1;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--academica-color-fg-base);
+  }
+  
+  .tag__icon {
+    display: flex;
+    block-size: calc(var(--academica-size-block-component-base) * 0.25);
+    
+    inline-size: auto;
+    font-size: inherit;
+  }
+  
+  /* color: inherit; */
+  
+  .tag__icon svg {
+      transition: var(--academica-transition-basic);
+    }
+  
+  .tag__icon svg path {
+        fill: currentcolor;
+        /* fill: var(--academica-color-fg-black-static); */
+      }
+  
+  .tag--science .tag__icon {
+    color: var(--academica-color-tag-cat1);
+  }
+  
+  .tag--arts .tag__icon {
+    color: var(--academica-color-tag-cat2);
+  }
+  
+  .tag--medicine .tag__icon {
+    color: var(--academica-color-tag-cat3);
+  }
+  
+  .tag--philosophy .tag__icon {
+    color: var(--academica-color-tag-cat4);
+  }
