@@ -1,3 +1,21 @@
+
+
+
+{%
+  set classes = [
+    'block',
+  ]
+%}
+
+{% if attributes is not empty %}
+<div{{ attributes.addClass(classes) }}>
+{% endif %}
+
+{{ title_prefix }}
+{% if label %}
+  <h2{{ title_attributes }}>{{ label }}</h2>
+{% endif %}
+{{ title_suffix }}
 {% block content %}
   {{ include ('academica:card', {
     card_title: content.field_card_title,
@@ -6,3 +24,7 @@
     variant: content['#block_content'].field_card_type.0.value,
   }) }}
 {% endblock %}
+
+{% if attributes is not empty %}
+</div>
+{% endif %}
