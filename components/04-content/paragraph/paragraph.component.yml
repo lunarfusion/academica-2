@@ -9,18 +9,13 @@ variants:
   lead:
     title: Lead paragraph
   deck:
-    title: Lead text functioning like a subheading
+    title: deck
   kicker:
     title: Text introducing a title
 
 
 props:
   type: object
-  properties:
-  html_tag:
-    type: string
-    description: HTML tag of the paragraph
-    default: p
 
 slots:
   content:

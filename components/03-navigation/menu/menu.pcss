@@ -11,8 +11,8 @@
   
   &__item {
     font-size: var(--academica-size-text-small);
-    border-inline-end: 1px solid var(--academica-color-border-neutral-light);
     padding: var(--academica-size-xs-inner-vert-component) var(--academica-size-xs-inner-horiz-component);
+    
     
     &:last-child {
       border-inline-end: none;
@@ -70,5 +70,13 @@
   &--horizontal {
     display: flex;
     flex-direction: row;
+    
+    .menu__item {
+      border-inline-end: 1px solid var(--academica-color-border-neutral-light);
+      
+      .menu__item {
+        border: none;
+      }
+    }
   }
 }

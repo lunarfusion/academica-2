@@ -1,10 +1,9 @@
 .content-row {
-  border: 1px dashed var(--academica-color-border-primary);
   min-block-size: 5rem;
 }
   
   .content-row__inner {
-    padding: 1rem;
+    padding: 2rem;
     display: flex;
   }
   
@@ -16,7 +15,7 @@
   }
   
   .content-row div {
-    border: 2px dashed fuchsia;
+    /* border: 2px dashed fuchsia; */
   }
   
   /*** *** BACKGROUNDS *** ***/

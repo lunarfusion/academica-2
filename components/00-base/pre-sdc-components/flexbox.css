@@ -6,6 +6,7 @@
   flex-wrap: wrap;
   align-items: flex-start;
   justify-content: flex-start;
+  gap: var(--academica-size-xl-gap-component);
 }
 .row--vert-p-1 {
     padding-block: calc(var(--academica-size-container-padding) * 2);
@@ -40,12 +41,12 @@
 /********* FLEXBOX COLUMNS *********/
 .col {
   position: relative;
-  
+
   width: auto;
   max-width: 100%;
   flex-grow: 1;
   flex-basis: 0;
-  
+
   padding-inline: var(--academica-size-col-padding);
   margin-block: calc(var(--academica-size-col-padding) * 0.5);
 }
@@ -55,8 +56,8 @@
   }
 /* half width */
 .col--6 {
-    flex: 0 0 50%;
-    max-width: 50%;
+    flex: 0 0 calc(50% - var(--academica-size-xl-gap-component));
+    max-width: calc(50% - var(--academica-size-xl-gap-component));
   }
 @media (max-width: 576px) {
       .col--6 {
@@ -66,13 +67,13 @@
     }
 /* TWOTHIRD width */
 .col--8 {
-    flex: 0 0 66.66667%;
-    max-width: 66.66667%;
+    flex: 0 0 calc(66.66667% - var(--academica-size-xl-gap-component));
+    max-width: calc(66.66667% - var(--academica-size-xl-gap-component));
   }
 @media (max-width: 992px) {
       .col--8 {
-        flex: 0 0 66.66667%;
-        max-width: 66.66667%;
+        flex: 0 0 calc(66.66667% - var(--academica-size-xl-gap-component));
+        max-width: calc(66.66667% - var(--academica-size-xl-gap-component));
       }
     }
 @media (max-width: 768px) {
@@ -90,8 +91,8 @@
 /* How should col-4 behave when following col-8? */
 @media (max-width: 992px) {
         .col--8~.col--4 {
-          flex: 0 0 33.33334%;
-          max-width: 33.33334%;
+          flex: 0 0 calc(33.33333% - var(--academica-size-xl-gap-component));
+          max-width: calc(33.33333% - var(--academica-size-xl-gap-component));
         }
       }
 @media (max-width: 768px) {
@@ -108,13 +109,13 @@
       }
 /* THIRD width */
 .col--4 {
-    flex: 0 0 33.33334%;
-    max-width: 33.33334%;
+    flex: 0 0 calc(33.33334% - var(--academica-size-xl-gap-component));
+    max-width: calc(33.33334% - var(--academica-size-xl-gap-component));
   }
 @media (max-width: 992px) {
       .col--4 {
-        flex: 0 0 50%;
-        max-width: 50%;
+        flex: 0 0 calc(50% - var(--academica-size-xl-gap-component));
+        max-width: calc(50% - var(--academica-size-xl-gap-component));
       }
     }
 @media (max-width: 768px) {
@@ -133,8 +134,8 @@
 /* how should col-8 behave when it follows col-4? */
 @media (max-width: 992px) {
         .col--4~.col--8, .col--4~.emory-col--8 {
-          flex: 0 0 50%;
-          max-width: 50%;
+          flex: 0 0 calc(50% - var(--academica-size-xl-gap-component));
+          max-width: calc(50% - var(--academica-size-xl-gap-component));
         }
       }
 @media (max-width: 768px) {
@@ -151,19 +152,19 @@
       }
 /* quarter width */
 .col--3 {
-    flex: 0 0 25%;
-    max-width: 25%;
+    flex: 0 0 calc(25% - var(--academica-size-xl-gap-component));
+    max-width: calc(25% - var(--academica-size-xl-gap-component));
   }
 @media (max-width: 992px) {
       .col--3 {
-        flex: 0 0 33.33334%;
-        max-width: 33.33334%
+        flex: 0 0 calc(33.33334% - var(--academica-size-xl-gap-component));
+        max-width: calc(33.33334% - var(--academica-size-xl-gap-component))
       }
     }
 @media (max-width: 768px) {
       .col--3 {
-        flex: 0 0 50%;
-        max-width: 50%
+        flex: 0 0 calc(50% - var(--academica-size-xl-gap-component));
+        max-width: calc(50% - var(--academica-size-xl-gap-component))
       }
     }
 @media (max-width: 576px) {
@@ -178,8 +179,8 @@
   }
 @media (max-width: 992px) {
       .col--2 {
-        flex: 0 0 25%;
-        max-width: 25%;
+        flex: 0 0 calc(25% - var(--academica-size-xl-gap-component));
+        max-width: calc(25% - var(--academica-size-xl-gap-component));
       }
     }
 @media (max-width: 576px) {
@@ -200,8 +201,8 @@
     }
 /* three quarter width */
 .col--9 {
-    flex: 0 0 75%;
-    max-width: 75%;
+    flex: 0 0 calc(75% - var(--academica-size-xl-gap-component));
+    max-width: calc(75% - var(--academica-size-xl-gap-component));
   }
 @media (max-width: 992px) {
       .col--9 {
@@ -230,22 +231,22 @@
 /* half width on large */
 @media (max-width: 992px) {
       .col--lg-6 {
-        flex: 0 0 50%;
-        max-width: 50%;
+        flex: 0 0 calc(50% - var(--academica-size-xl-gap-component));
+        max-width: calc(50% - var(--academica-size-xl-gap-component));
       }
     }
 /* half width on medium */
 @media (max-width: 768px) {
       .col--md-6 {
-        flex: 0 0 50%;
-        max-width: 50%;
+        flex: 0 0 calc(50% - var(--academica-size-xl-gap-component));
+        max-width: calc(50% - var(--academica-size-xl-gap-component));
       }
     }
 /* half width on small */
 @media (max-width: 576px) {
       .col--sm-6 {
-        flex: 0 0 50%;
-        max-width: 50%;
+        flex: 0 0 calc(50% - var(--academica-size-xl-gap-component));
+        max-width: calc(50% - var(--academica-size-xl-gap-component));
       }
     }
 /* FULL WIDTH TRUMPS */

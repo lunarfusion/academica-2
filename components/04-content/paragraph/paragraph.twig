@@ -6,6 +6,6 @@
 
 {% set attributes = attributes.addClass(classes) %}
 
-<{{ html_tag|default('p') }}{{attributes}}>
+<p{{attributes}}>
   {{ content }}
-</{{ html_tag|default('p') }}>
+</p>

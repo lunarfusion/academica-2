@@ -6,43 +6,44 @@
   flex-wrap: wrap;
   align-items: flex-start;
   justify-content: flex-start;
-  
+  gap: var(--academica-size-xl-gap-component);
+
   &--vert-p-1 {
     padding-block: calc(var(--academica-size-container-padding) * 2);
   }
-  
+
   &--stretch {
     align-items: stretch;
   }
-  
+
   &--bottom {
     place-items: end start;
   }
-  
+
   &--left {
     place-items: normal;
   }
-  
+
   &--right {
     place-items: start end;
   }
-  
+
   &--center {
     justify-content: center;
   }
-  
+
   &--align-center {
     align-items: center;
   }
-  
+
   &--between {
     justify-content: space-between;
   }
-  
+
   &--around {
     justify-content: space-around;
   }
-  
+
   &--gap-01 {
     gap: 1rem;
   }
@@ -51,25 +52,25 @@
 /********* FLEXBOX COLUMNS *********/
 .col {
   position: relative;
-  
+
   width: auto;
   max-width: 100%;
   flex-grow: 1;
   flex-basis: 0;
-  
+
   padding-inline: var(--academica-size-col-padding);
   margin-block: calc(var(--academica-size-col-padding) * 0.5);
-  
+
   /* auto width to content */
   &--auto {
     flex-grow: unset;
   }
-  
+
   /* half width */
   &--6 {
-    flex: 0 0 50%;
-    max-width: 50%;
-    
+    flex: 0 0 calc(50% - var(--academica-size-xl-gap-component));
+    max-width: calc(50% - var(--academica-size-xl-gap-component));
+
     @media (max-width: 576px) {
       & {
         flex: 0 0 100%;
@@ -77,52 +78,52 @@
       }
     }
   }
-  
-  
-  
+
+
+
   /* TWOTHIRD width */
   &--8 {
-    flex: 0 0 66.66667%;
-    max-width: 66.66667%;
-    
+    flex: 0 0 calc(66.66667% - var(--academica-size-xl-gap-component));
+    max-width: calc(66.66667% - var(--academica-size-xl-gap-component));
+
     @media (max-width: 992px) {
       & {
-        flex: 0 0 66.66667%;
-        max-width: 66.66667%;
+        flex: 0 0 calc(66.66667% - var(--academica-size-xl-gap-component));
+        max-width: calc(66.66667% - var(--academica-size-xl-gap-component));
       }
     }
-    
+
     @media (max-width: 768px) {
       & {
         flex: 0 0 100%;
         max-width: 100%;
       }
     }
-    
+
     @media (max-width: 576px) {
       & {
         flex: 0 0 100%;
         max-width: 100%;
       }
     }
-    
+
     /* How should col-4 behave when following col-8? */
     &~.col--4 {
-      
+
       @media (max-width: 992px) {
         & {
-          flex: 0 0 33.33334%;
-          max-width: 33.33334%;
+          flex: 0 0 calc(33.33333% - var(--academica-size-xl-gap-component));
+          max-width: calc(33.33333% - var(--academica-size-xl-gap-component));
         }
       }
-      
+
       @media (max-width: 768px) {
         & {
           flex: 0 0 100%;
           max-width: 100%;
         }
       }
-      
+
       @media (max-width: 576px) {
         & {
           flex: 0 0 100%;
@@ -131,27 +132,27 @@
       }
     }
   }
-  
-  
+
+
   /* THIRD width */
   &--4 {
-    flex: 0 0 33.33334%;
-    max-width: 33.33334%;
-    
+    flex: 0 0 calc(33.33334% - var(--academica-size-xl-gap-component));
+    max-width: calc(33.33334% - var(--academica-size-xl-gap-component));
+
     @media (max-width: 992px) {
       & {
-        flex: 0 0 50%;
-        max-width: 50%;
+        flex: 0 0 calc(50% - var(--academica-size-xl-gap-component));
+        max-width: calc(50% - var(--academica-size-xl-gap-component));
       }
     }
-    
+
     @media (max-width: 768px) {
       & {
         flex: 0 0 100%;
         max-width: 100%;
       }
     }
-    
+
     @media (max-width: 576px) {
       & {
         flex: 0 0 100%;
@@ -159,25 +160,25 @@
         min-width: 100%;
       }
     }
-    
+
     /* how should col-8 behave when it follows col-4? */
     &~.col--8,
     &~.emory-col--8 {
-      
+
       @media (max-width: 992px) {
         & {
-          flex: 0 0 50%;
-          max-width: 50%;
+          flex: 0 0 calc(50% - var(--academica-size-xl-gap-component));
+          max-width: calc(50% - var(--academica-size-xl-gap-component));
         }
       }
-      
+
       @media (max-width: 768px) {
         & {
           flex: 0 0 100%;
           max-width: 100%;
         }
       }
-      
+
       @media (max-width: 576px) {
         & {
           flex: 0 0 100%;
@@ -186,27 +187,27 @@
       }
     }
   }
-  
-  
+
+
   /* quarter width */
   &--3 {
-    flex: 0 0 25%;
-    max-width: 25%;
-    
+    flex: 0 0 calc(25% - var(--academica-size-xl-gap-component));
+    max-width: calc(25% - var(--academica-size-xl-gap-component));
+
     @media (max-width: 992px) {
       & {
-        flex: 0 0 33.33334%;
-        max-width: 33.33334%
+        flex: 0 0 calc(33.33334% - var(--academica-size-xl-gap-component));
+        max-width: calc(33.33334% - var(--academica-size-xl-gap-component))
       }
     }
-    
+
     @media (max-width: 768px) {
       & {
-        flex: 0 0 50%;
-        max-width: 50%
+        flex: 0 0 calc(50% - var(--academica-size-xl-gap-component));
+        max-width: calc(50% - var(--academica-size-xl-gap-component))
       }
     }
-    
+
     @media (max-width: 576px) {
       & {
         flex: 0 0 100%;
@@ -214,19 +215,19 @@
       }
     }
   }
-  
-  
+
+
   &--2 {
     flex: 0 0 16.6667%;
     max-width: 16.6667%;
-    
+
     @media (max-width: 992px) {
       & {
-        flex: 0 0 25%;
-        max-width: 25%;
+        flex: 0 0 calc(25% - var(--academica-size-xl-gap-component));
+        max-width: calc(25% - var(--academica-size-xl-gap-component));
       }
     }
-    
+
     @media (max-width: 576px) {
       & {
         flex: 0 0 100%;
@@ -234,11 +235,11 @@
       }
     }
   }
-  
+
   &--10 {
     flex: 0 0 83.3334%;
     max-width: 83.3334%;
-    
+
     @media (max-width: 992px) {
       & {
         flex: 0 0 100%;
@@ -246,12 +247,12 @@
       }
     }
   }
-  
+
   /* three quarter width */
   &--9 {
-    flex: 0 0 75%;
-    max-width: 75%;
-    
+    flex: 0 0 calc(75% - var(--academica-size-xl-gap-component));
+    max-width: calc(75% - var(--academica-size-xl-gap-component));
+
     @media (max-width: 992px) {
       & {
         flex: 0 0 100%;
@@ -259,13 +260,13 @@
       }
     }
   }
-  
-  
+
+
   /* three quarter width */
   &--7 {
     flex: 0 0 58.333%;
     max-width: 58.333%;
-    
+
     @media (max-width: 768px) {
       & {
         flex: 0 0 100%;
@@ -273,48 +274,48 @@
       }
     }
   }
-  
-  
+
+
   /* full width */
   &--12 {
     flex: 0 0 100%;
     max-width: 100%;
     min-width: 100%;
   }
-  
-  
+
+
   /* HALF WIDTH TRUMPS */
   /* half width on large */
   &--lg-6 {
     @media (max-width: 992px) {
       & {
-        flex: 0 0 50%;
-        max-width: 50%;
+        flex: 0 0 calc(50% - var(--academica-size-xl-gap-component));
+        max-width: calc(50% - var(--academica-size-xl-gap-component));
       }
     }
   }
-  
+
   /* half width on medium */
   &--md-6 {
     @media (max-width: 768px) {
       & {
-        flex: 0 0 50%;
-        max-width: 50%;
+        flex: 0 0 calc(50% - var(--academica-size-xl-gap-component));
+        max-width: calc(50% - var(--academica-size-xl-gap-component));
       }
     }
   }
-  
+
   /* half width on small */
   &--sm-6 {
     @media (max-width: 576px) {
       & {
-        flex: 0 0 50%;
-        max-width: 50%;
+        flex: 0 0 calc(50% - var(--academica-size-xl-gap-component));
+        max-width: calc(50% - var(--academica-size-xl-gap-component));
       }
     }
   }
-  
-  
+
+
   /* FULL WIDTH TRUMPS */
   /* full width on large */
   &--lg-12 {
@@ -325,7 +326,7 @@
       }
     }
   }
-  
+
   /* full width on medium */
   &--md-12 {
     @media (max-width: 768px) {
@@ -335,7 +336,7 @@
       }
     }
   }
-  
+
   /* full width on small */
   &--sm-12 {
     @media (max-width: 576px) {

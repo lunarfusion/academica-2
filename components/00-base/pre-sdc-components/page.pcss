@@ -1,8 +1,25 @@
-
 /* sticky footer */
 .page {
   position: relative;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+}
+
+/*** TODO - find a better way to style full width page elements ***/
+.page--fullwidth {
+  
+  .node__content-inner {
+    display: inline-block;
+    inline-size: 100%;
+    max-inline-size: var(--academica-size-charlimit);
+    margin: 0 auto;
+    padding-block-end: 3rem;
+  }
+  
+  .region--page-title {
+    inline-size: 100%;
+    max-inline-size: var(--academica-size-charlimit);
+    margin: 0 auto;
+  }
 }

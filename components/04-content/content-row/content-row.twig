@@ -9,15 +9,16 @@
 
 
 <div{{ attributes.addClass(content_row_classes) }}>
-  <div class="content-row__inner">
-    <div class="content-row__col">
-      {{ paragraph_content }}
-    </div>
+  <div class="content-row__inner container">
+    <div class="row">
+      <div class="content-row__col col col--6">
+        {{ paragraph_content }}
+      </div>
 
-    <div class="content-row__col">
-      {{ paragraph_figure }}
+      <div class="content-row__col col col--6">
+        {{ paragraph_figure }}
+      </div>
     </div>
-
     {# <div class="content-row__col">
       {{ content }}
     </div> #}

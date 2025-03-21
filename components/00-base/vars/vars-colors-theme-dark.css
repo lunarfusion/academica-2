@@ -22,11 +22,11 @@
     --academica-color-bg-primary-light: var(--academica-color-blue-020);
     --academica-color-bg-primary-lightest: var(--academica-color-blue-005);
     
-    /* --academica-color-bg-secondary: var(--academica-color-cyan-040); */
-    --academica-color-bg-secondary-light: var(--academica-color-cyan-020);
+    --academica-color-bg-secondary: var(--academica-color-cyan-020);
+    --academica-color-bg-secondary-light: var(--academica-color-cyan-015);
     --academica-color-bg-secondary-lightest: var(--academica-color-cyan-010);
     
-    /* --academica-color-bg-tertiary: var(--academica-color-purple-060); */
+    --academica-color-bg-tertiary: var(--academica-color-purple-020);
     --academica-color-bg-tertiary-light: var(--academica-color-purple-010);
     
     /*** Backgrounds - Base Theme - Neutral ***/

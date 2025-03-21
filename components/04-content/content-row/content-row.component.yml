@@ -8,6 +8,10 @@ variants:
     title: default
   bg-blue:
     title: Blue background
+  bg-cyan:
+    title: Cyan background
+  bg-purple:
+    title: Purple background
 
 props:
   type: object
@@ -18,3 +22,10 @@ slots:
     title: Content
   paragraph_figure:
     title: Figure
+
+libraryOverrides:
+    js:
+      content-row.js: {}
+    dependencies:
+      - core/drupal
+      - core/once

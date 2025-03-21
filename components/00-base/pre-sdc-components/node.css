@@ -15,10 +15,3 @@
     inline-size: auto;
     /* margin: 0 auto; */
   }
-  
-  .page--fullwidth .node__content-inner {
-      display: inline-block;
-      inline-size: 100%;
-      max-inline-size: var(--academica-size-charlimit);
-      margin: 0 auto;
-    }
