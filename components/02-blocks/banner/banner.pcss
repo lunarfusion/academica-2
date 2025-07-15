@@ -4,14 +4,14 @@
   inline-size: 100%;
   background-color: var(--academica-color-bg-primary);
   margin-block-end: 3rem;
-  
+
   /*** CHILD ELEMENTS ***/
   &__container {
     inline-size: 100%;
     margin: 0 auto;
     position: relative;
   }
-  
+
   &__content {
     position: relative;
     z-index: 3;
@@ -22,20 +22,20 @@
     background-position: center calc(0% - 3rem);
     overflow: hidden;
   }
-  
+
   &__content-inner {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-  
+
   &__title {
     position: relative;
     font-size: var(--academica-size-text-extra-lrg);
     font-size: 4rem;
     font-weight: 700;
     line-height: 1.1;
-    
+
     &::after {
       position: absolute;
       bottom: 0;
@@ -48,22 +48,23 @@
       background: linear-gradient(to right, var(--academica-color-rainbow));
     }
   }
-  
+
   &__text {
     font-size: var(--academica-size-text-lrg);
     line-height: 1.8;
   }
-  
+
   &__image {
     display: flex;
+    overflow: hidden;
   }
-  
+
   @media (max-width: 992px) {
     & {
       .banner__title {
         font-size: 3rem;
       }
-      
+
       .banner__text {
         font-size: var(--academica-size-text-med);
         line-height: 1.8;
@@ -71,21 +72,21 @@
       }
     }
   }
-  
+
   /*** *** *** VARIANTS *** *** ***/
   /*** Hero style - full width ***/
   &--hero {
-    
+
     .banner__container {
       display: flex;
       flex-direction: column-reverse;
     }
-    
+
     .banner__content {
       padding-block-start: 3rem;
       padding-block-end: 4rem;
     }
-    
+
     .banner__content-inner {
       max-inline-size: 1200px;
       margin: 0 auto;
@@ -93,14 +94,14 @@
       flex-direction: row;
       gap: 2.5rem;
     }
-    
+
     .banner__title {
       flex: 0 0 50%;
       max-width: 50%;
       padding-inline-end: 2rem;
       block-size: 100%;
-      
-      
+
+
       &::after {
         bottom: 0;
         top: 0;
@@ -111,20 +112,20 @@
         transform: rotate(-90deg);
       }
     }
-    
+
     @media (max-width: 992px) {
       & {
         .banner__content-inner {
           flex-direction: column;
         }
-        
+
         .banner__title {
           flex: 0 0 100%;
           max-width: 100%;
           padding-inline-end: 0;
           padding-block-end: 2rem;
         }
-        
+
         .banner__title::after {
           transform: none;
           transform-origin: unset;
@@ -135,76 +136,80 @@
       }
     }
   }
-  
+
   /*** Diptych style - two column ***/
   &--diptych {
     display: flex;
     flex-direction: row;
-    
+
     .banner__container {
       min-block-size: 650px;
-      
+
       display: flex;
       flex-direction: row;
       align-items: stretch;
       justify-content: center;
     }
-    
+
     .banner__content {
       display: flex;
       flex-direction: column;
       justify-content: center;
       padding: 4rem;
-      
+
       background: url("/themes/custom/academica-2/assets/images/sacred-seed.svg"), var(--academica-color-bg-primary);
       background-repeat: repeat-y;
       background-size: 6rem auto;
       background-position: calc(0% - 3rem) center;
     }
-    
+
     .banner__content-inner {
       gap: 2rem;
     }
-    
+
     .banner__title {
       padding-block-end: 2.5rem;
     }
-    
+
     .banner__text {
       padding-inline-start: 2rem;
     }
-    
+
     .banner__image {
       display: flex;
       flex: 0 0 60%;
       max-width: 60%;
-      
+
       img {
         max-width: unset;
         object-fit: cover;
         object-position: center;
       }
     }
-    
+
     @media (max-width: 992px) {
       & {
         .banner__container {
-          display: block;
+          flex-direction: column-reverse;
           min-block-size: unset;
         }
-        
+
         .banner__content {
           padding: 3rem;
         }
-        
+
         .banner__image {
-          flex: 0 0 100%;
+          /* flex: 0 0 50%;
+          max-width: 100%; */
+          flex: unset;
           max-width: 100%;
+          display: block;
         }
-        
+
         .banner__image img {
           width: 100%;
           max-width: 100%;
+          object-fit: cover;
           /* object-fit: contain; */
         }
       }

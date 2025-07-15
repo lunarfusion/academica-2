@@ -7,18 +7,18 @@
   max-width: var(--academica-size-charlimit-lg);
   margin-block-start: 0;
   margin-block-end: 0.5rem;
-  
+
   &--page {
-    margin-block-end: 2rem;
+    margin-block: 2rem;
   }
-  
+
   &--card {
     position: relative;
     display: block;
     margin: 0;
     /* border-inline-start: 6px solid var(--academica-color-border-tertiary); */
     padding-inline-start: 1rem;
-    
+
     &::before {
       content: "";
       width: 6px;
@@ -32,16 +32,16 @@
       border-radius: var(--academica-size-radius-sm);
     }
   }
-  
+
   &--section {
     position: relative;
     display: block;
     padding-block-start: 1.5rem;
-    
+
     &::before {
       --flag-height: 12px;
       --notch-calc: calc(100% - var(--flag-height));
-      
+
       content: "";
       width: 5rem;
       height: var(--flag-height);
@@ -55,7 +55,7 @@
       border-start-start-radius: var(--flag-height);
     }
   }
-  
+
   /* ::before {
     position: absolute;
     top: 0;
@@ -77,11 +77,11 @@
   position: relative;
   display: block;
   padding-block-start: 1.5rem;
-  
+
   &::before {
     --flag-height: 12px;
     --notch-calc: calc(100% - var(--flag-height));
-    
+
     content: "";
     width: 5rem;
     height: var(--flag-height);

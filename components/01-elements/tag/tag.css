@@ -8,8 +8,9 @@
   align-items: center;
   gap: var(--academica-size-sm-gap-component);
   margin-inline-end: 1rem;
+  background-color: gray;
 }
-  
+
   .tag__label {
     font-family: var(--academica-font-primary);
     font-size: var(--academica-size-text-extra-small);
@@ -19,38 +20,38 @@
     letter-spacing: 1px;
     color: var(--academica-color-fg-base);
   }
-  
+
   .tag__icon {
     display: flex;
     block-size: calc(var(--academica-size-block-component-base) * 0.25);
-    
+
     inline-size: auto;
     font-size: inherit;
   }
-  
+
   /* color: inherit; */
-  
+
   .tag__icon svg {
       transition: var(--academica-transition-basic);
     }
-  
+
   .tag__icon svg path {
         fill: currentcolor;
         /* fill: var(--academica-color-fg-black-static); */
       }
-  
+
   .tag--science .tag__icon {
     color: var(--academica-color-tag-cat1);
   }
-  
+
   .tag--arts .tag__icon {
     color: var(--academica-color-tag-cat2);
   }
-  
+
   .tag--medicine .tag__icon {
     color: var(--academica-color-tag-cat3);
   }
-  
+
   .tag--philosophy .tag__icon {
     color: var(--academica-color-tag-cat4);
   }

@@ -3,7 +3,13 @@
 {% set nav_type_class = nav_type ? 'nav--%s'|format(nav_type) : '' %}
 {% set modifier_class = '%s %s'|format(nav_type_class, modifier_class|default('')) %}
 
+{# ⬇ this needs to be added, learn how to use #}
+{# {% set nav_id = nav_id|default("navigation-" ~random()) %} #}
+
+{# ⬇ this is wrong and should be removed, but JS breaks without it #}
 {% import _self as menus %}
+
+{# ⬇ this is maybe correct #}
 {% macro menu_links(items, menu_level, nav_type, modifier_class, nav_id) %}
 
   {% if items %}
@@ -49,4 +55,8 @@
     {% endif %}
   {% endmacro %}
 
+{# ⬇ this is wrong, but JS breaks without it #}
 {{ menus.menu_links(items, 0, nav_type, modifier_class, nav_id) }}
+
+{# ⬇ this is correct #}
+{# {{ _self.menu_links(items, 0, nav_type, modifier_class, nav_id) }} #}

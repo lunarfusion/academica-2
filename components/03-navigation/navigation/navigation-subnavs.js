@@ -1,4 +1,6 @@
 ((Drupal, once) => {
+  // This is overly complex and needs a lot of work
+
 	// SUBMENU TOGGLE ICONS
 	// Add a has-children class to menu-items with submenus
 	// find the child menu-wrapper

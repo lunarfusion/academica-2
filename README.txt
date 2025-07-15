@@ -12,7 +12,7 @@ Academica follows atomic design practices with Drupal Single Directory Component
 
 # Starting
 
-Storybook University uses Vite with a type of HTML.
+Academica uses Vite to compile postCSS with a type of HTML.
 
 To run postCSS compiling:
 

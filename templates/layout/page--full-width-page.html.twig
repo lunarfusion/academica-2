@@ -5,8 +5,14 @@
     {{ page.header }}
   </header>
 
+  <div class="container container--full">
+    {{ page.main_menu }}
+  </div>
+
+  <main role="main" class="main-content" id="main-content">
+    <a id="main-content-skip" tabindex="-1"></a>{# link is in html.html.twig #}
+
     <div class="container container--full">
-      {{ page.main_menu }}
       {{ page.banner }}
     </div>
 
@@ -19,10 +25,6 @@
 
       {{ page.content_top }}
     </div>
-
-    <main role="main" class="main-content" id="main-content">
-      <a id="main-content-skip" tabindex="-1"></a>{# link is in html.html.twig #}
-
 
       <div class="container container--full">
       {# no sidebars in full width page #}

@@ -7,21 +7,25 @@
 
     <div class="container container--full">
       {{ page.main_menu }}
-      {{ page.banner }}
-    </div>
-
-    <div class="container">
-      {{ page.highlighted }}
-
-      {{ page.admin_tasks }}
-
-      {{ page.breadcrumb }}
-
-      {{ page.content_top }}
     </div>
 
     <main role="main" class="main-content" id="main-content">
       <a id="main-content-skip" tabindex="-1"></a>{# link is in html.html.twig #}
+
+      <div class="container container--full">
+        {{ page.banner }}
+      </div>
+
+      <div class="container">
+        {{ page.highlighted }}
+
+        {{ page.admin_tasks }}
+
+        {{ page.breadcrumb }}
+
+        {{ page.content_top }}
+      </div>
+
 
       <div class="container">
         <div class="row">

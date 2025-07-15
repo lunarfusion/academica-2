@@ -12,6 +12,8 @@ variants:
     title: Ghost
   empty:
     title: Empty
+  disabled:
+    title: Disabled
 
 props:
   type: object
